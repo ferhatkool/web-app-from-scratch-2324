@@ -9,7 +9,7 @@ const trackOne = document.querySelector("#track1");
 const trackTwo = document.querySelector("#track2");
 
 // Variable waarin de locatie van een JSON file staat.
-const jsonFile = "../json/data.json"
+const jsonFile = "./json/data.json"
     // Laadt de JSON file in (fetch).
     fetch(jsonFile)
         // Na Fetch, doe dan iets met de functie 'response.'
