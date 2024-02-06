@@ -25,11 +25,11 @@
     "tracks": [
         {
             "title": "Spittin' Facts",
-            "location": "../meta/music/track1.mp3"
+            "location": "./meta/music/track1.mp3"
         },
         {
             "title": "Dark Side",
-            "location": "../meta/music/track2.mp3"
+            "location": "./meta/music/track2.mp3"
         }
     ]
 }   
