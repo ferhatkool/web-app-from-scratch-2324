@@ -6,9 +6,72 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="./styles/style.css" rel="stylesheet">
+    <link href="./styles/fonts.css" rel="stylesheet">
+    <link href="./styles/scrollbar.css" rel="stylesheet">
+    <script src="./js/buttonClick.js" type="application/javascript"></script>
     <title>Web App From Scratch 23-24</title>
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Expires" CONTENT="-1">
 </head>
-<body>
-<h1>Hello World</h1>
-</body>
+    <body class="scrollbar">
+        <ul class="button_layout">
+            <button class="button_animation toggle" data-target="aboutMe">About Me</button>
+            <button class="button_animation toggle" data-target="music">Muziek</button>
+            <button class="button_animation toggle" data-target="hobbies">Hobbies</button>
+            <button class="button_animation toggle" data-target="top5">Top 5</button>
+            <button class="button_animation toggle" data-target="blog">Blog</button>
+        </ul>
+
+        <div class="content" id="aboutMe" style="display: none;">
+            <h2 class="center">About Me!</h2>
+        </div>
+
+        <div class="content" id="music" style="display: none;">
+            <h2 class="center">Playlists!</h2>
+            <div class="playlists">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/557OhUWEAHkqKsdXJgQ5Zt?utm_source=generator&theme=0" width="33%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2BX34DOcDREOf1ymxnAi0M?utm_source=generator&theme=0" width="33%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4zHDt33wIOJrK9XGpTq7aj?utm_source=generator&theme=0" width="33%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+            <h2 class="center">Geproduceerde tracks</h2>
+            <div class="tracks">
+                <div class="track">
+                    <h2>Track 1: <div id="trackName1" class="inline"></div></h2>
+                    <audio controls class="audio">
+                        <source id="track1" src="" type="audio/mp3">
+                    </audio>
+                </div>
+                <div class="track">
+                    <h2>Track 2: <div id="trackName2" class="inline"></div></h2>
+                    <audio controls class="audio">
+                        <source id="track2" src="" type="audio/mp3">
+                    </audio>
+                </div>
+            </div>
+        </div>
+
+        <div class="content" id="hobbies" style="display: none;">
+            <h2 class="center">Hobbies!</h2>
+                
+        </div>
+
+        <div class="content" id="top5" style="display: none;">
+            <h2 class="center">Top 5!</h2>
+        </div>
+
+        <div class="content" id="blog" style="display: none;">
+            <h2 class="center">Blog!</h2>
+        </div>
+
+
+        <div class="default" style="display: flex;">
+            <h1 class="center">
+                Welkom op <div id="domainName" class="inline"></div>!</h1>
+            <h2 class="center">
+                This page is created and owned by <div id="name" class="inline"></div>.</h2>
+        </div>
+
+        <script src="./js/fetch.js" type="application/javascript"></script>
+        <script src="./js/audioReload.js" type="application/javascript"></script>
+    </body>
 </html>

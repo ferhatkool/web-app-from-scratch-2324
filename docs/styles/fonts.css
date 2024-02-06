@@ -1,0 +1,25 @@
+@font-face { font-family: AvenirLight; src: url('../meta/fonts/Avenir\ Light.ttf'); } 
+@font-face { font-family: AvenirBlack; src: url('../meta/fonts/Avenir\ Black.ttf'); } 
+@font-face { font-family: AvenirBook; src: url('../meta/fonts/Avenir\ Book.ttf'); } 
+
+.bold {
+  font-family: AvenirBlack;
+}
+  
+.book {
+  font-family: AvenirBook;
+}
+  
+.command {
+  font-family: AvenirBook;
+  font-size: 10px;
+}
+
+.white {
+  color: white;
+  text-shadow: 1px 1px 2px black;
+}
+
+.black {
+  color: black;
+}

@@ -1,0 +1,35 @@
+{
+    "name": "Ferhat Kool",
+    "domainName": "ferhatkool.nl",
+    "dateOfBirth": [
+        {
+            "year": 2001,
+            "month": 11,
+            "day": 19
+        }
+    ],
+    "city": "Hoorn",
+    "province": "Noord-Holland",
+    "study": "HBO-ICT: Cyber Security Specialist",
+    "term": "4",
+    "favoriteMovies": ["", "", "", "", ""],
+    "favoriteMusicGenre": "Hardcore / Hardcore-Uptempo",
+    "favoriteTracks": ["","","","",""],
+    "jobCompany": "GAMMA",
+    "jobTitle": "Winkelmedewerker",
+    "hobbies": ["Muziek luisteren", "Muziek produceren", "Muziek mixen", "Tot de late uren chillen met vrienden", ""],
+    "avatar": {
+        "url": "https://avatars.githubusercontent.com/u/159013968?v=4",
+        "alternativeText": "missing avatar"
+    },
+    "tracks": [
+        {
+            "title": "Spittin' Facts",
+            "location": "../meta/music/track1.mp3"
+        },
+        {
+            "title": "Dark Side",
+            "location": "../meta/music/track2.mp3"
+        }
+    ]
+}   

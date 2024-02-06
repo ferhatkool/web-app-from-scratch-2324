@@ -1,3 +1,108 @@
-body{
-    background-color: red;
+:root {
+    --title-font: 'AvenirBlack';
+    --text-font: 'AvenirBook';
+}
+
+body {
+    background-color: white;
+}
+
+h1 {
+    font-family: var(--title-font);
+}
+
+h2 {
+    font-family: var(--text-font);
+}
+
+.center {
+    text-align: center;
+}
+
+.inline {
+    display: inline;
+}
+
+.button_layout {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: auto;
+    padding: 0em 2em 0em 2em;
+}
+
+button {
+    font-family: var(--title-font);
+    width: 15em;
+    height: 5em;
+    margin: 3em 4em 3em 4em;
+    background: rgba(0, 0, 0, 0.3);
+    border: none;
+    font-size: 1.0em;
+    font-weight: 300;
+    border-radius: 3px;
+    color: lighten(#27AE60, 40%);
+    border-bottom: 4px solid darken(#27AE60, 10%);
+    outline: none;
+    letter-spacing: 2px;
+}
+
+button:hover {
+    background: tint(#27AE60, 4%);
+    -webkit-animation: hop 1s;
+    animation: hop 1s;
+}
+  
+.button_animation {
+    display: inline-block;
+    /* De transitie duur van de animatie. */
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    /* Het transitie effect van de animatie. */
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    /* Opmaak van de tekst in de login knop. */
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    color: white;
+}
+  
+.button_animation:hover, .float:focus, .float:active {
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+}
+
+.content {
+    overflow: hidden;
+    justify-content: center;
+    flex-flow: column wrap;
+    width: 90%;
+    margin: auto;
+    height: auto;
+}
+
+.default {
+    justify-content: center;
+    flex-flow: column wrap;
+}
+
+.playlists {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:nowrap;
+}
+
+.tracks {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column wrap
+}
+
+.track {
+    display: flex;
+    justify-content: space-between;
+}
+
+.audio {
+    display: inline-flex;
 }

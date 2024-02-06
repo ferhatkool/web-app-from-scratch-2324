@@ -1,0 +1,28 @@
+.scrollbar {
+    overflow-y: overlay; /* Show vertical scrollbar */
+  }
+  
+  .no_scrollbar {
+    overflow: hidden
+  }
+  
+  .scrollbar::-webkit-scrollbar {
+      width: 5px;
+  }
+    
+    /* Track */
+  .scrollbar::-webkit-scrollbar-track {
+      background: none;
+  }
+     
+    /* Handle */
+  .scrollbar::-webkit-scrollbar-thumb {
+      background: #888; 
+      border-radius: 5px;
+  }
+    
+    /* Handle on hover */
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #555;
+      border-radius: 5px;
+  }
