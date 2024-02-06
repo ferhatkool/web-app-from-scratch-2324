@@ -2,9 +2,10 @@
 const domainNameFile = document.getElementById("domainName");
 // Haal uit de HTML het element dat bij de ID "name" hoort. 
 const nameFile = document.getElementById("name");
+// Haal uit de HTML het element dat bij de ID "trackName1" en "trackName2" hoort.
 const trackNameOne = document.getElementById("trackName1");
 const trackNameTwo = document.getElementById("trackName2");
-
+// Haal uit de HTML het element dat bij de ID "track1" en "track2" hoort.
 const trackOne = document.querySelector("#track1");
 const trackTwo = document.querySelector("#track2");
 
@@ -24,13 +25,18 @@ const jsonFile = "./json/data.json"
         })
         // Na de functie 'response', doe dan iets met de functie 'data'.
         .then((data) => {
-            // Gebruik de variable 'nameFile' om in de HTML te zoeken naar de ID 'domainName 'a.d.h.v. innerHTML, om vervolgens deze waarde gelijk te maken aan de waarde bij 'domainName' uit de JSON file.
+            // Gebruik de variable 'domainNameFile' om in de HTML te zoeken naar de ID 'domainName' a.d.h.v. innerHTML, om vervolgens deze waarde gelijk te maken aan de waarde bij 'domainName' uit de JSON file.
             domainNameFile.innerHTML = data.domainName;
+            // Gebruik de variable 'nameFile' om in de HTML te zoeken naar de ID 'name' a.d.h.v. innerHTML, om vervolgens deze waarde gelijk te maken aan de waarde bij 'name' uit de JSON file.
             nameFile.innerHTML = data.name;
-            trackNameOne.innerHTML = data.tracks[0].title
-            trackOne.src = data.tracks[0].location
-            trackNameTwo.innerHTML = data.tracks[1].title
-            trackTwo.src = data.tracks[1].location
+            // Gebruik de variable 'trackNameOne' om in de HTML te zoeken naar de ID 'trackNameOne' a.d.h.v. innerHTML, om vervolgens deze waarde gelijk te maken aan de waarde bij 'title' in de 1e array van tracks uit de JSON file.
+            trackNameOne.innerHTML = data.tracks[0].title;
+            // Gebruik de variable 'trackOne' om in de HTML te zoeken naar locatie van een audio bestand a.d.h.v. .src, om vervolgens deze waarde gelijk te maken aan de waarde bij 'location' in de 1e array van tracks uit de JSON file.
+            trackOne.src = data.tracks[0].location;
+            // Gebruik de variable 'trackNameOne' om in de HTML te zoeken naar de ID 'trackNameTwo'a.d.h.v. innerHTML, om vervolgens deze waarde gelijk te maken aan de waarde bij 'title' in de 2e array van tracks uit de JSON file.
+            trackNameTwo.innerHTML = data.tracks[1].title;
+            // Gebruik de variable 'trackTwo' om in de HTML te zoeken naar locatie van een audio bestand a.d.h.v. .src, om vervolgens deze waarde gelijk te maken aan de waarde bij 'location' in de 2e array van tracks uit de JSON file.
+            trackTwo.src = data.tracks[1].location;
 
             // Genereer een console bericht met daarin de inhoud van de variable 'data', wat de gehele JSON file is.
             console.log(data);
