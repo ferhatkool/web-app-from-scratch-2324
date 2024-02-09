@@ -8,70 +8,194 @@
     <link href="./styles/style.css" rel="stylesheet">
     <link href="./styles/fonts.css" rel="stylesheet">
     <link href="./styles/scrollbar.css" rel="stylesheet">
-    <script src="./js/buttonClick.js" type="application/javascript"></script>
+    
+    <!--<script src="./js/buttonClick.js" type="application/javascript"></script>-->
     <title>Web App From Scratch 23-24</title>
     <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
     <META HTTP-EQUIV="Expires" CONTENT="-1">
 </head>
-    <body class="scrollbar">
+    <body class="">
+        <!-- <img src = "./meta/pictures/wallpaper.png" alt="" class=""> -->
         <ul class="button_layout">
-            <button class="button_animation toggle" data-target="aboutMe">About Me</button>
-            <button class="button_animation toggle" data-target="music">Muziek</button>
-            <button class="button_animation toggle" data-target="hobbies">Hobbies</button>
-            <button class="button_animation toggle" data-target="top5">Top 5</button>
-            <button class="button_animation toggle" data-target="blog">Blog</button>
+            <button class="button_animation toggle" id="aboutMeButton">About Me</button>
+            <button class="button_animation toggle" id="musicButton">Muziek</button>
+            <button class="button_animation toggle" id="hobbiesButton">Hobbies</button>
+            <button class="button_animation toggle" id="top5Button">Top 5</button>
+            <button class="button_animation toggle" id="blogButton">Blog</button>
         </ul>
 
-        <div class="content" id="aboutMe" style="display: none;">
-            <h2 class="center">About Me!</h2>
-        </div>
-
-        <div class="content" id="music" style="display: none;">
-            <h2 class="center">Playlists!</h2>
-            <div class="playlists">
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/557OhUWEAHkqKsdXJgQ5Zt?utm_source=generator&theme=0" width="33%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2BX34DOcDREOf1ymxnAi0M?utm_source=generator&theme=0" width="33%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4zHDt33wIOJrK9XGpTq7aj?utm_source=generator&theme=0" width="33%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <dialog id="dialogAboutMe" class="scrollbar">
+            <div id="aboutMeStopPropagation">
+                <form method="dialog">
+                    <div class="content" style="display: flex;">
+                        <h2 class="center">About Me!</h2>
+                        <div class="aboutMePage">
+                            <h3 class="left max-width1">
+                                Mijn naam is <div id="name1" class="inline"></div>, ik ben <div id="age" class="inline"></div> jaar oud en ik ben geboren & getogen in <div id="city" class="inline"></div>, <div id="province" class="inline"></div>. 
+                                Momenteel zit ik in het <div id="term" class="inline"></div>e jaar van de opleiding <div id="study" class="inline"></div> en volg ik de minor <div id="minor" class="inline"></div>, wat onder de afdeling CMD valt.
+                                Mijn keuze om geheel iets anders te doen als ICT komt voort uit projecten die ik tijdens mijn opleiding heb gevolgd waarbij ik een simpele website moest maken. Dit kreeg zo erg mijn interesse dat ik me hier meer in widle gaan verdiepen, om geadvanceerde, professionele websites te kunnen ontwikkelen. 
+                                <br><br>Naast mijn studie werk ik sinds 2021 als part-time <div id="jobTitle" class="inline"></div> bij de <div id="jobCompany" class="inline"></div>. De uren die ik per week werk varieëren per schoolperiode, maar over het algemeen werk ik één dag in het weekend. Ook heb ik talloze hobbies, wat te vinden is onder het kopje "Hobbies".
+                            </h3>
+                            <img src="./meta/pictures/portrait2.jpg" class="portrait">
+                        </div>
+                    </div>
+                    <button class="button_animation" id="exit">Close</button>
+                </form>
             </div>
-            <h2 class="center">Geproduceerde tracks</h2>
-            <div class="tracks">
-                <div class="track">
-                    <h2>Track 1: <div id="trackName1" class="inline"></div></h2>
-                    <audio controls class="audio">
-                        <source id="track1" src="" type="audio/mp3">
-                    </audio>
-                </div>
-                <div class="track">
-                    <h2>Track 2: <div id="trackName2" class="inline"></div></h2>
-                    <audio controls class="audio">
-                        <source id="track2" src="" type="audio/mp3">
-                    </audio>
-                </div>
+        </dialog>
+
+        <dialog id="dialogMusic" class="scrollbar">
+            <div id="musicStopPropagation">
+                <form method="dialog">
+                    <div class="content"style="display: flex;">
+                        <h2 class="center">Playlists!</h2>
+                        <div class="playlists">
+                            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/557OhUWEAHkqKsdXJgQ5Zt?utm_source=generator&theme=0" width="33%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2BX34DOcDREOf1ymxnAi0M?utm_source=generator&theme=0" width="33%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4zHDt33wIOJrK9XGpTq7aj?utm_source=generator&theme=0" width="33%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                        </div>
+                        <h2 class="center">Geproduceerde tracks</h2>
+                        <div class="tracks">
+                            <div class="track">
+                                <h2>Track 1: <div id="trackName1" class="inline"></div></h2>
+                                <audio controls class="audio">
+                                    <source id="track1" src="" type="audio/mp3">
+                                </audio>
+                            </div>
+                            <div class="track">
+                                <h2>Track 2: <div id="trackName2" class="inline"></div></h2>
+                                <audio controls class="audio">
+                                    <source id="track2" src="" type="audio/mp3">
+                                </audio>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="button_animation" id="exit">Close</button>
+                </form>
             </div>
-        </div>
+        </dialog>
 
-        <div class="content" id="hobbies" style="display: none;">
-            <h2 class="center">Hobbies!</h2>
-                
-        </div>
+        <dialog id="dialogHobbies" class="scrollbar">
+            <div id="hobbiesStopPropagation">
+                <form method="dialog">
+                    <div class="content" id="hobbies" style="display: flex;">
+                        <h2 class="center">Hobbies!</h2>
+                            
+                    </div>
+                    <button class="button_animation" id="exit">Close</button>
+                </form>
+            </div>
+        </dialog>
 
-        <div class="content" id="top5" style="display: none;">
-            <h2 class="center">Top 5!</h2>
-        </div>
+        <dialog id="dialogTop5" class="scrollbar">
+            <div id="top5StopPropagation">
+                <form method="dialog">
+                    <div class="content" id="top5" style="display: flex;">
+                        <div class="top5list" style="display: flex;">
+                            <div class="top5heroes">
+                                <h1 class="center">Heroes</h2>
+                                <details>
+                                    <summary class="center"><div id="hero1" class="inline"></div></summary>
+                                    <div class="heroAndVillainFlex">
+                                        <p><div id="hero1context" class="inline"></div></p>
+                                        <img id="hero1picture" src="">
+                                    </div>
+                                </details>
+                                <details>
+                                    <summary class="center"><div id="hero2" class="inline"></div></summary>
+                                    <div class="heroAndVillainFlex">
+                                        <p><div id="hero2context" class="inline"></div></p>
+                                        <img id="hero2picture" src="">
+                                    </div>
+                                </details>
+                                <details>
+                                    <summary class="center"><div id="hero3" class="inline"></div></summary>
+                                    <div class="heroAndVillainFlex">
+                                        <p><div id="hero3context" class="inline"></div></p>
+                                        <img id="hero3picture" src="">
+                                    </div>
+                                </details>
+                                <details>
+                                    <summary class="center"><div id="hero4" class="inline"></div></summary>
+                                    <div class="heroAndVillainFlex">
+                                        <p><div id="hero4context" class="inline"></div></p>
+                                        <img id="hero4picture" src="">
+                                    </div>
+                                </details>
+                                <details>
+                                    <summary class="center"><div id="hero5" class="inline"></div></summary>
+                                    <div class="heroAndVillainFlex">
+                                        <p><div id="hero5context" class="inline"></div></p>
+                                        <img id="hero5picture" src="">
+                                    </div>
+                                </details>
+                            </div>
+                            <div class="top5villains">
+                                <h1 class="center">Villains</h2>
+                                    <details>
+                                        <summary class="center"><div id="villain1" class="inline"></div></summary>
+                                        <div class="heroAndVillainFlex">
+                                            <p><div id="villain1context" class="inline"></div></p>
+                                            <img id="villain1picture" src="">
+                                        </div>
+                                    </details>
+                                    <details>
+                                        <summary class="center"><div id="villain2" class="inline"></div></summary>
+                                        <div class="heroAndVillainFlex">
+                                            <p><div id="villain2context" class="inline"></div></p>
+                                            <img id="villain2picture" src="">
+                                        </div>
+                                    </details>
+                                    <details>
+                                        <summary class="center"><div id="villain3" class="inline"></div></summary>
+                                        <div class="heroAndVillainFlex">
+                                            <p><div id="villain3context" class="inline"></div></p>
+                                            <img id="villain3picture" src="">
+                                        </div>
+                                    </details>
+                                    <details>
+                                        <summary class="center"><div id="villain4" class="inline"></div></summary>
+                                        <div class="heroAndVillainFlex">
+                                            <p><div id="villain4context" class="inline"></div></p>
+                                            <img id="villain4picture" src="">
+                                        </div>
+                                    </details>
+                                    <details>
+                                        <summary class="center"><div id="villain5" class="inline"></div></summary>
+                                        <div class="heroAndVillainFlex">
+                                            <p><div id="villain5context" class="inline"></div></p>
+                                            <img id="villain5picture" src="">
+                                        </div>
+                                    </details>
+   
+                            </div>
+                        </div>
+                    </div>
+                    <button class="button_animation" id="exit">Close</button>
+                </form>
+            </div>
+        </dialog>
 
-        <div class="content" id="blog" style="display: none;">
-            <h2 class="center">Blog!</h2>
-        </div>
+        <dialog id="dialogBlog" class="scrollbar">
+            <div id="blogStopPropagation">
+                <form methpd="dialog">
+                    <div class="content" id="blog" style="display: flex;">
+                        <h2 class="center">Blog!</h2>
+                    </div>
+                    <button class="button_animation" id="exit">Close</button>
+                </form>
+            </div>
+        </dialog>
 
-
-        <div class="default" style="display: flex;">
+        <div class="default white" style="display: flex;">
             <h1 class="center">
                 Welkom op <div id="domainName" class="inline"></div>!</h1>
             <h2 class="center">
-                This page is created and owned by <div id="name" class="inline"></div>.</h2>
+                This page is created and owned by <div id="name2" class="inline"></div>.</h2>
         </div>
 
         <script src="./js/fetch.js" type="application/javascript"></script>
         <script src="./js/audioReload.js" type="application/javascript"></script>
+        <script src="./js/buttonClick.js" type="application/javascript"></script>
     </body>
 </html>

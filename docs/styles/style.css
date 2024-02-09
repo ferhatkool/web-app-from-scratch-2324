@@ -5,6 +5,12 @@
 
 body {
     background-color: white;
+    background-image: url(../meta/pictures/wallpaper.png);
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden;
 }
 
 h1 {
@@ -15,19 +21,51 @@ h2 {
     font-family: var(--text-font);
 }
 
+h3 {
+    font-family: var(--text-font)
+}
+
+summary {
+    font-family: var(--title-font);
+}
+
+p {
+    font-family: var(--text-font);
+}
+
 .center {
     text-align: center;
+}
+
+.left {
+    text-align: left;
+}
+
+.white {
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+.max-width1 {
+    min-width: 10%;
+    max-width: 40em;
 }
 
 .inline {
     display: inline;
 }
 
+.portrait {
+    max-width: 45em;
+    min-width: 20em;
+    border-radius: 1em;
+}
+
 .button_layout {
     display: flex;
     flex-flow: row nowrap;
     margin: auto;
-    padding: 0em 2em 0em 2em;
+    padding: auto;  
 }
 
 button {
@@ -76,7 +114,7 @@ button:hover {
     overflow: hidden;
     justify-content: center;
     flex-flow: column wrap;
-    width: 90%;
+    width: 100%;
     margin: auto;
     height: auto;
 }
@@ -84,6 +122,32 @@ button:hover {
 .default {
     justify-content: center;
     flex-flow: column wrap;
+}
+
+.aboutMePage {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.top5list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+.top5heroes {
+    width: 45%;
+}
+
+.top5villains {
+    width: 45%;
+}
+
+.heroAndVillainFlex {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
 }
 
 .playlists {
@@ -105,4 +169,18 @@ button:hover {
 
 .audio {
     display: inline-flex;
+}
+
+dialog {
+    width: 80%;
+    max-height: 90%;
+    border-radius: 1em;
+    padding: 0em 1em 0em 1em;
+    margin-top: 3.4em;
+    margin-bottom: 3.4em;
+    background-color: rgb(255, 255, 255, 0.9);
+}
+
+dialog::backdrop {
+    backdrop-filter: blur(4px);
 }

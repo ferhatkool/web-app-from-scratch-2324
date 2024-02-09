@@ -1,5 +1,5 @@
 .scrollbar {
-    overflow-y: overlay; /* Show vertical scrollbar */
+    overflow-y: scroll; /* Show vertical scrollbar */
   }
   
   .no_scrollbar {

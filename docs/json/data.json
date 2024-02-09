@@ -11,12 +11,13 @@
     "city": "Hoorn",
     "province": "Noord-Holland",
     "study": "HBO-ICT: Cyber Security Specialist",
+    "minor": "Web Design & Development",
     "term": "4",
     "favoriteMovies": ["", "", "", "", ""],
     "favoriteMusicGenre": "Hardcore / Hardcore-Uptempo",
     "favoriteTracks": ["","","","",""],
     "jobCompany": "GAMMA",
-    "jobTitle": "Winkelmedewerker",
+    "jobTitle": "Verkoopmedewerker",
     "hobbies": ["Muziek luisteren", "Muziek produceren", "Muziek mixen", "Tot de late uren chillen met vrienden", ""],
     "avatar": {
         "url": "https://avatars.githubusercontent.com/u/159013968?v=4",
@@ -31,5 +32,62 @@
             "title": "Dark Side",
             "location": "./meta/music/track2.mp3"
         }
+    ],
+    "heroes": [
+        {
+            "hero": "Thor",
+            "heropicture": "https://comicvine.gamespot.com/a/uploads/scale_small/1/15776/9141024-thor5.jpg",
+            "herocontext": "Thor Odinson is the All-father of Asgard /God of Thunder, offspring of All-Father Odin & Elder-Goddess Gaea. Combining the powers of both realms makes him an elder-god hybrid and a being of no perceivable limits. Armed with his enchanted Uru hammer Mjolnir which helps him to channel his godly energies. The mightiest and the most beloved warrior in all of Asgard, a staunch ally for good and one of the most powerful beings in the multiverse/omniverse. Thor is also a founding member of the Avengers.",
+            "heroorigin": "Marvel"
+        },
+        {
+            "hero": "Batman",
+            "heropicture": "https://comicvine.gamespot.com/a/uploads/scale_small/11144/111442876/8759934-jrjrhr.jpg",
+            "herocontext": "Bruce Wayne, who witnessed the murder of his billionaire parents as a child, swore to avenge their deaths. He trained extensively to achieve mental and physical perfection, mastering martial arts, detective skills, and criminal psychology. Costumed as a bat to prey on the fears of criminals, and utilizing a high-tech arsenal, he became the legendary Batman."
+        },
+        {
+            "hero": "Iron Man",
+            "heropicture": "https://comicvine.gamespot.com/a/uploads/scale_small/12/124259/8654427-ezgif-1-2f113089e4.jpg",
+            "herocontext": "Tony Stark was the arrogant son of wealthy, weapon manufacturer Howard Stark. Tony cared only about himself, but he would have a change of heart after he was kidnapped by terrorists and gravely injured. Pressured to create a weapon of mass destruction, Stark instead created a suit of armor powerful enough for him to escape. Tony used his vast resources and intellect to make the world a better place as The Invincible Iron Man. Stark's super hero identity led him to become a founding member of the Avengers."
+        },
+        {
+            "hero": "Wolverine",
+            "heropicture": "https://comicvine.gamespot.com/a/uploads/scale_small/5/57023/7469590-wolverinerb.jpg",
+            "herocontext": "A long-lived mutant with the rage of a beast and the soul of a Samurai, James 'Logan' Howlett's once mysterious past is filled with blood, war, and betrayal. Possessing an accelerated healing factor, keenly enhanced senses, and bone claws in each hand (along with his skeleton) that are coated in adamantium; Wolverine is, without question, the ultimate weapon."
+        },
+        {
+            "hero": "Hulk",
+            "heropicture": "https://comicvine.gamespot.com/a/uploads/scale_small/12/124259/9174497-21.jpeg",
+            "herocontext": "After being bombarded with a massive dose of gamma radiation while saving a young man's life during an experimental bomb testing, Dr. Robert Bruce Banner was transformed into the Incredible Hulk: a green behemoth who is the living personification of rage and pure physical strength."
+        }
+        
+    ],
+    "villains": [
+        {
+            "villain": "Joker",
+            "villainpicture": "https://comicvine.gamespot.com/a/uploads/scale_small/12/124259/7538232-three-jokers-1-cvr-fnl-1583776056592.jpg",
+            "villaincontext": "The Joker, Clown Prince of Crime, is Batman's arch-nemesis. An agent of chaos known for his malicious plots, wacky gadgets and insidious smile, he has caused Batman more suffering than any other villain he has ever faced. His origin, name, and true motivations remain a mystery."
+        },
+        {
+            "villain": "Poison Ivy",
+            "villainpicture": "https://comicvine.gamespot.com/a/uploads/scale_small/12/124259/8501806-ezgif-5-abdcb0d098.jpg",
+            "villaincontext": "A brilliant botanical biochemist, Pamela Isley is a fervent eco-terrorist out to save the world's plant life by any means necessary. She often finds herself at odds with Batman, though they have, on occasion, fought on the same side."
+        },
+        {
+            "villain": "Black Widow",
+            "villainpicture": "https://comicvine.gamespot.com/a/uploads/scale_small/11156/111564182/9081470-widow1.jpg",
+            "villaincontext": "A former KGB agent, Natasha Alianovna Romanova, better known as Natasha Romanoff or Black Widow, was trained by the top-secret Soviet brainwashing and training program, the Red Room, to become the ultimate 'Super-Spy'. She defected from the Soviet Union to the US to join S.H.I.E.L.D. Subsequently, Black Widow proceeded to become a member of the Avengers and has been on the team on numerous occasions. She's a woman with an enigmatic past which very few are acquainted with."
+        },
+        {
+            "villain": "Doctor Strange",
+            "villainpicture": "https://comicvine.gamespot.com/a/uploads/scale_small/12/124259/8753901-ezgif-3-69b95d2d1b.jpg",
+            "villaincontext": "Dr. Stephen Strange was once a gifted but egotistical surgeon who sought out the Ancient One to heal his hands after they were wounded in a car accident. Instead, the Ancient One trained him to become Master of the Mystic Arts and the Sorcerer Supreme of Earth."
+        },
+        {
+            "villain": "Black Cat",
+            "villainpicture": "https://comicvine.gamespot.com/a/uploads/scale_small/11144/111442876/8759849-grr.jpg",
+            "villaincontext": "Former cat burglar Felicia Hardy became a crime fighter when she became romantically attracted to and involved with Spider-Man. Felicia has the ability to instill 'bad luck' around others - this comes in handy when fighting crime!"
+        }
+        
     ]
 }   
