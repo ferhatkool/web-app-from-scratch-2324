@@ -17,6 +17,125 @@ body {
     overflow: hidden;
 }
 
+
+@media screen and (max-width: 800px) {
+    .center_button_layout {
+        display: flex;
+        justify-content: center;
+    }
+
+    .flex_button_layout {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    .button_layout {
+        display: none;
+        flex-flow: column nowrap;
+        
+    }
+
+    .button {
+        margin: 1em 0em 0em 0em;
+    }
+    
+    .showMenu {
+        display: flex;
+    }
+
+    .hamburger {
+        margin: auto;
+        padding: auto;
+        background-color: transparent;
+        border: none;
+    }
+
+    .aboutMePage {
+        display: flex;
+        justify-content: space-between;
+        flex-flow: column-reverse nowrap;
+    }
+
+    .aboutMeWidth {
+        width: 100%;
+    }
+
+    .content {
+        overflow: hidden;
+        justify-content: center;
+        flex-flow: column wrap;
+        object-fit: cover;
+        object-position: center center;
+        margin: auto;
+        height: auto;
+    }
+
+    h3 {
+        font-size: 10px
+    }
+
+    .portrait {
+        width: 100%;
+        border-radius: 1em;
+        object-fit: fill;
+        object-position: center center;
+    }
+}
+
+@media screen and (min-width: 801px) {
+    .button_layout {
+        display: flex;
+        flex-flow: row nowrap;
+        margin: auto;
+        padding: auto; 
+
+    }
+    
+    .button {
+        margin: 3em 4em 3em 4em;
+    }
+    
+    .hamburger {
+        display: none !important;
+    }
+
+    .menuIcon {
+        display: none !important; 
+    }
+
+    .closeIcon {
+        display: none !important;
+    }
+    
+    .aboutMePage {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+ 
+    .aboutMeWidth {
+        min-width: 10%;
+        max-width: 45%;
+    }
+
+    .content {
+        overflow: hidden;
+        justify-content: center;
+        flex-flow: column wrap;
+        width: 100%;
+        margin: auto;
+        height: auto;
+    }
+
+    .portrait {
+        max-width: 45em;
+        min-width: 20em;
+        border-radius: 1em;
+        object-fit: cover;
+        object-position: center center;
+    }
+}
+
 h1 {
     font-family: var(--title-font);
 }
@@ -57,87 +176,11 @@ p {
     text-shadow: 1px 1px 2px black;
 }
 
-.max-width1 {
-    min-width: 10%;
-    max-width: 45%;
-}
-
 .inline {
     display: inline;
 }
 
-.portrait {
-    max-width: 45em;
-    min-width: 20em;
-    border-radius: 1em;
-    object-fit: cover;
-    object-position: center center;
-}
 
-
-@media screen and (max-width: 800px) {
-    .center_button_layout {
-        display: flex;
-        justify-content: center;
-    }
-
-    .flex_button_layout {
-        display: flex;
-        flex-flow: column nowrap;
-    }
-
-    .button_layout {
-        display: none;
-        flex-flow: column nowrap;
-        
-    }
-
-    .button {
-        margin: 1em 0em 0em 0em;
-    }
-    
-    .showMenu {
-        display: flex;
-    }
-
-    .hamburger {
-        margin: auto;
-        padding: auto;
-        background-color: transparent;
-        border: none;
-    }
-
-}
-
-@media screen and (min-width: 801px) {
-    .button_layout {
-        display: flex;
-        flex-flow: row nowrap;
-        margin: auto;
-        padding: auto; 
-
-    }
-    
-    .button {
-        margin: 3em 4em 3em 4em;
-    }
-    
-    .showMenu {
-        display: none !important;
-    }
-    
-    .hamburger {
-        display: none !important;
-    }
-
-    .menuIcon {
-        display: none !important; 
-    }
-
-    .closeIcon {
-        display: none !important;
-    }
-}
 
 ul {
     padding-inline-start: 0px;
@@ -185,25 +228,11 @@ ul {
     transform: translateY(-3px);
 }
 
-.content {
-    overflow: hidden;
-    justify-content: center;
-    flex-flow: column wrap;
-    width: 100%;
-    margin: auto;
-    height: auto;
-}
-
 .default {
     justify-content: center;
     flex-flow: column wrap;
 }
 
-.aboutMePage {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-}
 
 .top5list {
     display: flex;
