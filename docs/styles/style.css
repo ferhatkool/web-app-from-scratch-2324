@@ -3,6 +3,10 @@
     --text-font: 'AvenirBook';
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: white;
     background-image: url(../meta/pictures/wallpaper.png);
@@ -15,6 +19,13 @@ body {
 
 h1 {
     font-family: var(--title-font);
+}
+
+@media screen and (max-width: 800px) {
+    h1 {
+        color:blueviolet;
+    }
+    
 }
 
 h2 {
@@ -48,7 +59,7 @@ p {
 
 .max-width1 {
     min-width: 10%;
-    max-width: 40em;
+    max-width: 45%;
 }
 
 .inline {
@@ -59,20 +70,84 @@ p {
     max-width: 45em;
     min-width: 20em;
     border-radius: 1em;
+    object-fit: cover;
+    object-position: center center;
 }
 
-.button_layout {
-    display: flex;
-    flex-flow: row nowrap;
-    margin: auto;
-    padding: auto;  
+
+@media screen and (max-width: 800px) {
+    .center_button_layout {
+        display: flex;
+        justify-content: center;
+    }
+
+    .flex_button_layout {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    .button_layout {
+        display: none;
+        flex-flow: column nowrap;
+        
+    }
+
+    .button {
+        margin: 1em 0em 0em 0em;
+    }
+    
+    .showMenu {
+        display: flex;
+    }
+
+    .hamburger {
+        margin: auto;
+        padding: auto;
+        background-color: transparent;
+        border: none;
+    }
+
 }
 
-button {
+@media screen and (min-width: 801px) {
+    .button_layout {
+        display: flex;
+        flex-flow: row nowrap;
+        margin: auto;
+        padding: auto; 
+
+    }
+    
+    .button {
+        margin: 3em 4em 3em 4em;
+    }
+    
+    .showMenu {
+        display: none !important;
+    }
+    
+    .hamburger {
+        display: none !important;
+    }
+
+    .menuIcon {
+        display: none !important; 
+    }
+
+    .closeIcon {
+        display: none !important;
+    }
+}
+
+ul {
+    padding-inline-start: 0px;
+}
+
+
+.button {
     font-family: var(--title-font);
     width: 15em;
     height: 5em;
-    margin: 3em 4em 3em 4em;
     background: rgba(0, 0, 0, 0.3);
     border: none;
     font-size: 1.0em;
@@ -84,7 +159,7 @@ button {
     letter-spacing: 2px;
 }
 
-button:hover {
+.button:hover {
     background: tint(#27AE60, 4%);
     -webkit-animation: hop 1s;
     animation: hop 1s;

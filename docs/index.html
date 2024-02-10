@@ -8,6 +8,7 @@
     <link href="./styles/style.css" rel="stylesheet">
     <link href="./styles/fonts.css" rel="stylesheet">
     <link href="./styles/scrollbar.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     
     <!--<script src="./js/buttonClick.js" type="application/javascript"></script>-->
     <title>Web App From Scratch 23-24</title>
@@ -16,14 +17,21 @@
 </head>
     <body class="">
         <!-- <img src = "./meta/pictures/wallpaper.png" alt="" class=""> -->
-        <ul class="button_layout">
-            <button class="button_animation toggle" id="aboutMeButton">About Me</button>
-            <button class="button_animation toggle" id="musicButton">Muziek</button>
-            <button class="button_animation toggle" id="hobbiesButton">Hobbies</button>
-            <button class="button_animation toggle" id="top5Button">Top 5</button>
-            <button class="button_animation toggle" id="blogButton">Blog</button>
-        </ul>
-
+        <div class="center_button_layout">
+            <div class="flex_button_layout">
+                <button class="hamburger">
+                    <i class="menuIcon material-icons">menu</i>
+                    <i class="closeIcon material-icons" style="display: none">close</i>
+                </button>
+                <ul class="button_layout">
+                    <button class="button button_animation toggle" id="aboutMeButton">About Me</button>
+                    <button class="button button_animation toggle" id="musicButton">Muziek</button>
+                    <button class="button button_animation toggle" id="hobbiesButton">Hobbies</button>
+                    <button class="button button_animation toggle" id="top5Button">Top 5</button>
+                    <button class="button button_animation toggle" id="blogButton">Blog</button>
+                </ul>
+            </div>
+        </div>
         <dialog id="dialogAboutMe" class="scrollbar">
             <div id="aboutMeStopPropagation">
                 <form method="dialog">
@@ -197,5 +205,6 @@
         <script src="./js/fetch.js" type="application/javascript"></script>
         <script src="./js/audioReload.js" type="application/javascript"></script>
         <script src="./js/buttonClick.js" type="application/javascript"></script>
+        <script src="./js/hamburgerMenu.js" type="application/javascript"></script>
     </body>
 </html>
