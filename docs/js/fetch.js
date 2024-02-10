@@ -32,8 +32,10 @@ const minorVar = document.getElementById("minor")
 const jobCompanyVar = document.getElementById("jobCompany")
 const jobTitleVar = document.getElementById("jobTitle")
 // Haal uit de HTML het element dat bij de ID "trackName1" en "trackName2" hoort.
-const trackNameOne = document.getElementById("trackName1");
-const trackNameTwo = document.getElementById("trackName2");
+const trackNameOne = document.querySelector("#trackName1");
+const trackNameTwo = document.querySelector("#trackName2");
+const trackNameOneSecond = document.querySelector("#trackName1_2");
+const trackNameTwoSecond = document.querySelector("#trackName2_2");
 // Haal uit de HTML het element dat bij de ID "track1" en "track2" hoort.
 const trackOne = document.querySelector("#track1");
 const trackTwo = document.querySelector("#track2");
@@ -111,10 +113,12 @@ const jsonFile = "./json/data.json"
             jobTitleVar.innerHTML = data.jobTitle;
             // Gebruik de variable 'trackNameOne' om in de HTML te zoeken naar de ID 'trackNameOne' a.d.h.v. innerHTML, om vervolgens deze waarde gelijk te maken aan de waarde bij 'title' in de 1e array van tracks uit de JSON file.
             trackNameOne.innerHTML = data.tracks[0].title;
+            trackNameOneSecond.innerHTML = data.tracks[0].title;
             // Gebruik de variable 'trackOne' om in de HTML te zoeken naar locatie van een audio bestand a.d.h.v. .src, om vervolgens deze waarde gelijk te maken aan de waarde bij 'location' in de 1e array van tracks uit de JSON file.
             trackOne.src = data.tracks[0].location;
             // Gebruik de variable 'trackNameOne' om in de HTML te zoeken naar de ID 'trackNameTwo'a.d.h.v. innerHTML, om vervolgens deze waarde gelijk te maken aan de waarde bij 'title' in de 2e array van tracks uit de JSON file.
             trackNameTwo.innerHTML = data.tracks[1].title;
+            trackNameTwoSecond.innerHTML = data.tracks[1].title;
             // Gebruik de variable 'trackTwo' om in de HTML te zoeken naar locatie van een audio bestand a.d.h.v. .src, om vervolgens deze waarde gelijk te maken aan de waarde bij 'location' in de 2e array van tracks uit de JSON file.
             trackTwo.src = data.tracks[1].location;
 

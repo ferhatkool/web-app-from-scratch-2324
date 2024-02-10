@@ -80,6 +80,22 @@ body {
         object-fit: fill;
         object-position: center center;
     }
+
+    .responsive_music_web {
+        display: none !important;
+    }
+
+    .playlists {
+        display: flex;
+        justify-content: space-between;
+        flex-flow: column nowrap;
+        object-position: center center;
+    }
+
+    .playlist {
+        margin-bottom: 10px;
+        width: auto;
+    }
 }
 
 @media screen and (min-width: 801px) {
@@ -134,6 +150,16 @@ body {
         object-fit: cover;
         object-position: center center;
     }
+
+    .responsive_music_mobile {
+        display: none !important;
+    }
+
+    .playlists {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap:nowrap;
+    }
 }
 
 h1 {
@@ -179,8 +205,6 @@ p {
 .inline {
     display: inline;
 }
-
-
 
 ul {
     padding-inline-start: 0px;
@@ -254,11 +278,6 @@ ul {
     flex-wrap: nowrap;
 }
 
-.playlists {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap:nowrap;
-}
 
 .tracks {
     display: flex;

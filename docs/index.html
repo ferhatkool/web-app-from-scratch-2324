@@ -55,8 +55,8 @@
         <dialog id="dialogMusic" class="scrollbar">
             <div id="musicStopPropagation">
                 <form method="dialog">
-                    <div class="content"style="display: flex;">
-                        <h2 class="center">Playlists!</h2>
+                    <div class="content responsive_music_web"style="display: flex;">
+                        <h2 class="center">Playlists! (web)</h2>
                         <div class="playlists">
                             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/557OhUWEAHkqKsdXJgQ5Zt?utm_source=generator&theme=0" width="33%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2BX34DOcDREOf1ymxnAi0M?utm_source=generator&theme=0" width="33%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -77,6 +77,33 @@
                                 </audio>
                             </div>
                         </div>
+                    </div>
+                    <div class="content responsive_music_mobile"style="display: flex;">
+                        <details>
+                            <summary class="center"><h2 class="inline">Playlists!</h2></summary>
+                            <div class="playlists">
+                                <iframe class="playlist" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/557OhUWEAHkqKsdXJgQ5Zt?utm_source=generator&theme=0" width="auto" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                                <iframe class="playlist" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2BX34DOcDREOf1ymxnAi0M?utm_source=generator&theme=0" width="auto" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                                <iframe class="playlist" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4zHDt33wIOJrK9XGpTq7aj?utm_source=generator&theme=0" width="auto" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                            </div>
+                        </details>
+                            <h2 class="center" >Geproduceerde Tracks!</h2>
+                            <div class="tracks">
+                                <h2>Track 1: <div id="trackName1_2" class="inline"></div></h2>
+                                <div class="track">
+                                    
+                                    <audio controls class="audio">
+                                        <source id="track1" src="./meta/music/track1.mp3" type="audio/mp3">
+                                    </audio>
+                                </div>
+                                <h2>Track 2: <div id="trackName2_2" class="inline"></div></h2>
+                                <div class="track">
+                                    
+                                    <audio controls class="audio">
+                                        <source id="track2" src="./meta/music/track2.mp3" type="audio/mp3">
+                                    </audio>
+                                </div>
+                            </div>
                     </div>
                     <button class="button_animation" id="exit">Close</button>
                 </form>
