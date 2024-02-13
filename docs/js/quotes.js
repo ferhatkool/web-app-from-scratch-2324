@@ -27,10 +27,14 @@ function randomQuoteAPI() {
         })
         }
 
+function waitSomeTime() {
+    window.addEventListener('click', function() {
+        const randomClickToContinueAddFullPage = document.getElementById('full_page');
+        const randomClickToContinueRemoveQuote = document.getElementById('randomClickToContinue');
+        randomClickToContinueAddFullPage.style.display = 'block';
+        randomClickToContinueRemoveQuote.style.display = 'none';
+    })
+}
+
 window.addEventListener('load', randomQuoteAPI);
-window.addEventListener('click', function() {
-    const randomClickToContinueAddFullPage = document.getElementById('full_page');
-    const randomClickToContinueRemoveQuote = document.getElementById('randomClickToContinue');
-    randomClickToContinueAddFullPage.style.display = 'block';
-    randomClickToContinueRemoveQuote.style.display = 'none';
-})
+setTimeout(waitSomeTime, 2000)
