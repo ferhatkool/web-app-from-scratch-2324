@@ -30,7 +30,6 @@ function randomQuoteAPI() {
         })
         }
 
-
 function waitSomeTime() {
     window.addEventListener('click', function() {
         const randomClickToContinueAddFullPage = document.getElementById('full_page');
