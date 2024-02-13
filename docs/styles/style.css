@@ -189,6 +189,19 @@ body {
         justify-content: space-around;
         flex-flow: row nowrap;
     }
+
+    .scrollable {
+        height: 81.6311745334797vh;
+    }
+
+    .not_scrollable {
+        overflow: hidden;
+    }
+
+    .not_scrollable img {
+        width: 100%;
+        height: auto;
+    }
 }
 
 @media screen and (max-width: 1344px) {
@@ -361,19 +374,6 @@ p {
 .bulletList {
     font-family: var(--text-font);
     font-size: clamp(1rem, 1.3vw, 1.4rem); 
-}
-
-.scrollable {
-    height: 81.6311745334797vh;
-}
-
-.not_scrollable {
-    overflow: hidden;
-}
-
-.not_scrollable img {
-    width: 100%;
-    height: auto;
 }
 
 .quote_styling {

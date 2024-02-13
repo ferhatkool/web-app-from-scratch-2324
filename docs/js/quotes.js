@@ -26,6 +26,7 @@ function randomQuoteAPI() {
             quote.className = 'fade_in_quote';
             authorOfQuote.className = 'fade_in_quote';
             console.log(data)
+            setTimeout(waitSomeTime, 2000)
         })
         }
 
@@ -41,4 +42,4 @@ function waitSomeTime() {
 }
 
 window.addEventListener('load', randomQuoteAPI);
-setTimeout(waitSomeTime, 2000)
+
