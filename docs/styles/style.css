@@ -246,8 +246,6 @@ p {
     display: inline;
 }
 
-
-
 .button {
     font-family: var(--title-font);
     width: 15em;
@@ -360,17 +358,7 @@ p {
     height: auto;
 }
 
-.full_page {
-    animation: text 2s forwards;
-}
 
-@keyframes text {
-    0% {
-        opacity: 0;
-    } 100% {
-        opacity: 1;
-    }
-}
 
 .quote_styling {
     font-size: clamp(1rem, 1.3vw, 1.4em); 
@@ -383,6 +371,37 @@ p {
     text-shadow: 1px 1px 2px black;
 }
 
+.fade_in_quote {
+    animation: text 2s forwards;
+}
+
+.full_page_animation {
+    animation: text 2s forwards;
+}
+
+@keyframes text {
+    0% {
+        opacity: 0;
+    } 100% {
+        opacity: 1;
+    }
+}
+
 #randomQuote {
     font-style: italic;
+}
+
+.remove_quote_animation {
+    animation: fade 1s forwards;
+    -webkit-animation: fade 1s forwards;
+     -moz-animation: fade 1s forwards;
+   }
+   
+@keyframes fade {
+    from {
+       opacity: 1;
+    }
+    to {
+      opacity: 0.0;
+    }
 }

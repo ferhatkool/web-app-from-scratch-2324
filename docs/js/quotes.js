@@ -23,16 +23,20 @@ function randomQuoteAPI() {
         .then((data) => {
             quote.innerHTML = `"${data.content}"`;
             authorOfQuote.innerHTML = `~ ${data.author}`;
+            quote.className = 'fade_in_quote';
+            authorOfQuote.className = 'fade_in_quote';
             console.log(data)
         })
         }
+
 
 function waitSomeTime() {
     window.addEventListener('click', function() {
         const randomClickToContinueAddFullPage = document.getElementById('full_page');
         const randomClickToContinueRemoveQuote = document.getElementById('randomClickToContinue');
-        randomClickToContinueAddFullPage.style.display = 'block';
-        randomClickToContinueRemoveQuote.style.display = 'none';
+        randomClickToContinueAddFullPage.className = 'full_page_animation'
+        randomClickToContinueAddFullPage.style.display = 'block'
+        randomClickToContinueRemoveQuote.classList.add('remove_quote_animation')
     })
 }
 
