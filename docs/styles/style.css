@@ -213,13 +213,6 @@ h1 {
     font-family: var(--title-font);
 }
 
-@media screen and (max-width: 800px) {
-    h1 {
-        color:blueviolet;
-    }
-    
-}
-
 h2 {
     font-family: var(--text-font);
 }
