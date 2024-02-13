@@ -32,7 +32,7 @@ body {
     .button_layout {
         display: none;
         flex-flow: column nowrap;
-        
+        padding-inline-start: 0px;  
     }
 
     .button {
@@ -61,17 +61,12 @@ body {
     }
 
     .content {
-        overflow: hidden;
         justify-content: center;
         flex-flow: column wrap;
         object-fit: cover;
         object-position: center center;
         margin: auto;
         height: auto;
-    }
-
-    h3 {
-        font-size: 10px
     }
 
     .portrait {
@@ -81,7 +76,7 @@ body {
         object-position: center center;
     }
 
-    .responsive_music_web {
+    .responsive_music_web { 
         display: none !important;
     }
 
@@ -96,6 +91,25 @@ body {
         margin-bottom: 10px;
         width: auto;
     }
+
+    .heroAndVillainFlex {
+        display: flex;
+        justify-content: center;
+        flex-flow: column-reverse nowrap;
+    }
+    
+    .characterPortrait {
+        max-width: 100%;
+        max-height: auto;
+        object-fit: cover;
+        object-position: center center;
+    }
+
+    p {
+        font-size: clamp(0.9rem, 2vw, 1.2rem);
+    }
+
+    
 }
 
 @media screen and (min-width: 801px) {
@@ -104,7 +118,7 @@ body {
         flex-flow: row nowrap;
         margin: auto;
         padding: auto; 
-
+        padding-inline-start: 0px;
     }
     
     .button {
@@ -126,16 +140,15 @@ body {
     .aboutMePage {
         display: flex;
         justify-content: space-between;
-        flex-wrap: nowrap;
+        flex-flow: row nowrap;
     }
- 
+
     .aboutMeWidth {
         min-width: 10%;
         max-width: 45%;
     }
 
-    .content {
-        overflow: hidden;
+    .content {  
         justify-content: center;
         flex-flow: column wrap;
         width: 100%;
@@ -144,8 +157,8 @@ body {
     }
 
     .portrait {
-        max-width: 45em;
-        min-width: 20em;
+        width: 50%;
+        height: 30em;
         border-radius: 1em;
         object-fit: cover;
         object-position: center center;
@@ -159,6 +172,40 @@ body {
         display: flex;
         justify-content: space-between;
         flex-wrap:nowrap;
+    }
+
+    .characterPortrait {
+        max-width: 50%;
+        height: auto;
+        object-fit: cover;
+        margin-left: 1em;
+        border-style: solid;
+        border-radius: 5px;
+        border-color: black;
+    }
+
+    .heroAndVillainFlex {
+        display: flex;
+        justify-content: space-around;
+        flex-flow: row nowrap;
+    }
+}
+
+@media screen and (max-width: 1344px) {
+    .heroAndVillainFlex {
+        display: flex;
+        justify-content: center;
+        flex-flow: column-reverse nowrap;
+    }
+    
+    .characterPortrait {
+        max-width: 80%;
+        height: auto;
+        border-style: solid;
+        border-radius: 5px;
+        border-color: black;
+        object-fit: cover;
+        object-position: center center;
     }
 }
 
@@ -206,9 +253,6 @@ p {
     display: inline;
 }
 
-ul {
-    padding-inline-start: 0px;
-}
 
 
 .button {
@@ -272,13 +316,6 @@ ul {
     width: 45%;
 }
 
-.heroAndVillainFlex {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: nowrap;
-}
-
-
 .tracks {
     display: flex;
     justify-content: space-between;
@@ -306,4 +343,26 @@ dialog {
 
 dialog::backdrop {
     backdrop-filter: blur(4px);
+}
+
+p {
+    font-size: clamp(1rem, 1.3vw, 1.4em); 
+}
+
+.bulletList {
+    font-family: var(--text-font);
+    font-size: clamp(1rem, 1.3vw, 1.4rem); 
+}
+
+.scrollable {
+    height: 81.6311745334797vh;
+}
+
+.not_scrollable {
+    overflow: hidden;
+}
+
+.not_scrollable img {
+    width: 100%;
+    height: auto;
 }

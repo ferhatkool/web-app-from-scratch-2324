@@ -1,0 +1,10 @@
+{
+    "firstName": "Ferhat",
+    "lastName": "Kool",
+    "avatar_url": "https://comicvine.gamespot.com/a/uploads/scale_small/1/15776/9141024-thor5.jpg",
+    "age": 22,
+    "city": "Hoorn",
+    "hobbies" : ["Muziek luisteren", "Muziek produceren", "Muziek mixen", "Tot in de late uren met vrienden chillen", "Biertjes drinken", "Fotografie", "Server opzetten/beheren"],
+    "truthsAndLies" : ["Ik heb op het grootste hardcore festival van Nederland gedraaid.", "Ik heb voor mijn HBO-opleiding een MBO-opleiding gevolgd.", "Ik heb ooit een prijs bij de Staats Loterij gewonnen."],
+    "favouriteAnimal" : "Kat"
+}

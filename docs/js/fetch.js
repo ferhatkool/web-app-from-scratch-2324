@@ -23,14 +23,22 @@ const domainNameVar = document.getElementById("domainName");
 const nameVar1 = document.getElementById("name1");
 const nameVar2 = document.getElementById("name2");
 
-const ageVar = document.getElementById("age")
-const cityVar = document.getElementById("city")
-const provinceVar = document.getElementById("province")
-const termVar = document.getElementById("term")
-const studyVar = document.getElementById("study")
-const minorVar = document.getElementById("minor")
-const jobCompanyVar = document.getElementById("jobCompany")
-const jobTitleVar = document.getElementById("jobTitle")
+const ageVar = document.getElementById("age");
+const cityVar = document.getElementById("city");
+const provinceVar = document.getElementById("province");
+const termVar = document.getElementById("term");
+const studyVar = document.getElementById("study");
+const minorVar = document.getElementById("minor");
+const jobCompanyVar = document.getElementById("jobCompany");
+const jobTitleVar = document.getElementById("jobTitle");
+
+const hobbyOne = document.getElementById("hobby1");
+const hobbyTwo = document.getElementById("hobby2");
+const hobbyThree = document.getElementById("hobby3");
+const hobbyFour = document.getElementById("hobby4");
+const hobbyFive = document.getElementById("hobby5");
+const hobbySix = document.getElementById("hobby6");
+
 // Haal uit de HTML het element dat bij de ID "trackName1" en "trackName2" hoort.
 const trackNameOne = document.querySelector("#trackName1");
 const trackNameTwo = document.querySelector("#trackName2");
@@ -111,6 +119,13 @@ const jsonFile = "./json/data.json"
             minorVar.innerHTML = data.minor;
             jobCompanyVar.innerHTML = data.jobCompany;
             jobTitleVar.innerHTML = data.jobTitle;
+
+            hobbyOne.innerHTML = data.hobbies[0];
+            hobbyTwo.innerHTML = data.hobbies[1];
+            hobbyThree.innerHTML = data.hobbies[2];
+            hobbyFour.innerHTML = data.hobbies[3];
+            hobbyFive.innerHTML = data.hobbies[4];
+            hobbySix.innerHTML = data.hobbies[5];
             // Gebruik de variable 'trackNameOne' om in de HTML te zoeken naar de ID 'trackNameOne' a.d.h.v. innerHTML, om vervolgens deze waarde gelijk te maken aan de waarde bij 'title' in de 1e array van tracks uit de JSON file.
             trackNameOne.innerHTML = data.tracks[0].title;
             trackNameOneSecond.innerHTML = data.tracks[0].title;

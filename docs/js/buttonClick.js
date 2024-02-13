@@ -14,13 +14,13 @@ dialogMusicButton.addEventListener('click', () => dialogMusic.showModal());
 dialogMusic.addEventListener('click', () => dialogMusic.close());
 dialogMusicDiv.addEventListener('click', (event) => event.stopPropagation());
 
-const dialogHobbiesButton = document.getElementById('hobbiesButton');
-const dialogHobbies = document.getElementById('dialogHobbies');
-const dialogHobbiesDiv = document.getElementById('hobbiesStopPropagation');
+const dialogProjectsButton = document.getElementById('projectsButton');
+const dialogProjects = document.getElementById('dialogProjects');
+const dialogProjectsDiv = document.getElementById('projectsStopPropagation');
 
-dialogHobbiesButton.addEventListener('click', () => dialogHobbies.showModal());
-dialogHobbies.addEventListener('click', () => dialogHobbies.close());
-dialogHobbiesDiv.addEventListener('click', (event) => event.stopPropagation());
+dialogProjectsButton.addEventListener('click', () => dialogProjects.showModal());
+dialogProjects.addEventListener('click', () => dialogProjects.close());
+dialogProjectsDiv.addEventListener('click', (event) => event.stopPropagation());
 
 const dialogTop5Button = document.getElementById('top5Button');
 const dialogTop5 = document.getElementById('dialogTop5');
