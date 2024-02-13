@@ -330,10 +330,28 @@ dialog {
     margin-top: 3.4em;
     margin-bottom: 3.4em;
     background-color: rgb(255, 255, 255, 0.9);
+    transition: transform 1s;
 }
+
+.fade-out-dialog {
+    transform: translateY(-110%);
+  }
 
 dialog::backdrop {
     backdrop-filter: blur(4px);
+}
+
+dialog[open] {
+    -webkit-animation: show 1s ease normal;
+}
+
+@-webkit-keyframes show{
+    from {
+        transform: translateY(-110%);
+    }
+    to {
+        transform: translateY(0%);
+    }
 }
 
 p {
@@ -358,10 +376,8 @@ p {
     height: auto;
 }
 
-
-
 .quote_styling {
-    font-size: clamp(1rem, 1.3vw, 1.4em); 
+    font-size: clamp(1.2rem, 1.3vw, 1.4em); 
     font-family: 'AvenirLight';
     position: absolute;
     top: 50%;
@@ -403,5 +419,6 @@ p {
     }
     to {
       opacity: 0.0;
+      display: none;
     }
 }
