@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 ```
-<img href="./docs/meta/readme/JavaScript_Code1.png" alt="javascript code"><br>
+<img src="./docs/meta/readme/JavaScript_Code1.png" alt="javascript code"><br>
 
 De dialog functionaliteit werkt naar mijn mening beter dan dit script en biedt mij meer styling mogelijkheden aan voor de teksten die ik in en uit wil klappen.
 
