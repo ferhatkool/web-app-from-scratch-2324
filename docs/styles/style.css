@@ -17,7 +17,7 @@ body {
     overflow: hidden;
 }
 
-
+/* apply the following styling when the screen is smaller than 801px*/
 @media screen and (max-width: 800px) {
     .center_button_layout {
         display: flex;
@@ -112,6 +112,7 @@ body {
     
 }
 
+/* apply the following styling when the screen is wider than 801px*/
 @media screen and (min-width: 801px) {
     .button_layout {
         display: flex;

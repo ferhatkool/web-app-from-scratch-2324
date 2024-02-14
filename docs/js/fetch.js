@@ -1,7 +1,12 @@
+// function to calculate an age based on the date of birth.
 function getAge(dateOfBirth) {
+    // places the current date in a variable 
     var today = new Date();
+    // places the date of birth in a new variable
     var birthDate = new Date(dateOfBirth);
+    // calculate the age based on current year minus year of birth
     var age = today.getFullYear() - birthDate.getFullYear();
+    // calculate the current month minus the month of birth, to check whether the age should be 1 higher or not 
     var m = today.getMonth() - birthDate.getMonth();
     if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
         age--;
@@ -9,20 +14,23 @@ function getAge(dateOfBirth) {
     return age
 }
 
+// function to place the date of birth in a string to make calculations with it
 function dateOfBirthInString(year, month, day) {
+    // retrieve year of birth from json
     yearString = year.toString();
+    // retrieve month of birth from json
     monthString = month.toString();
+    // retrieve day of birth from json
     dayString = day.toString();
+    // place all the vars in one long string, splitter by a '-'
     string = yearString + '-' + monthString + '-' + dayString;
     return string
 }
 
-// Haal uit de HTML het element dat bij de ID "domainName" hoort.
+// Haal uit de HTML het element dat bij een ID or class hoort.
 const domainNameVar = document.getElementById("domainName");
-// Haal uit de HTML het element dat bij de ID "name" hoort. 
 const nameVar1 = document.getElementById("name1");
 const nameVar2 = document.getElementById("name2");
-
 const ageVar = document.getElementById("age");
 const cityVar = document.getElementById("city");
 const provinceVar = document.getElementById("province");
@@ -39,12 +47,11 @@ const hobbyFour = document.getElementById("hobby4");
 const hobbyFive = document.getElementById("hobby5");
 const hobbySix = document.getElementById("hobby6");
 
-// Haal uit de HTML het element dat bij de ID "trackName1" en "trackName2" hoort.
 const trackNameOne = document.querySelector("#trackName1");
 const trackNameTwo = document.querySelector("#trackName2");
 const trackNameOneSecond = document.querySelector("#trackName1_2");
 const trackNameTwoSecond = document.querySelector("#trackName2_2");
-// Haal uit de HTML het element dat bij de ID "track1" en "track2" hoort.
+
 const trackOne = document.querySelector("#track1");
 const trackTwo = document.querySelector("#track2");
 
@@ -104,9 +111,8 @@ const jsonFile = "./json/data.json"
         })
         // Na de functie 'response', doe dan iets met de functie 'data'.
         .then((data) => {
-            // Gebruik de variable 'domainNameFile' om in de HTML te zoeken naar de ID 'domainName' a.d.h.v. innerHTML, om vervolgens deze waarde gelijk te maken aan de waarde bij 'domainName' uit de JSON file.
+            // Plaats de data uit de JSON in de variable van het bijbehorende element, wat in de HTML wordt geplaatst.
             domainNameVar.innerHTML = data.domainName;
-            // Gebruik de variable 'nameFile' om in de HTML te zoeken naar de ID 'name' a.d.h.v. innerHTML, om vervolgens deze waarde gelijk te maken aan de waarde bij 'name' uit de JSON file.
             nameVar1.innerHTML = data.name;
             nameVar2.innerHTML = data.name;
 
@@ -126,15 +132,12 @@ const jsonFile = "./json/data.json"
             hobbyFour.innerHTML = data.hobbies[3];
             hobbyFive.innerHTML = data.hobbies[4];
             hobbySix.innerHTML = data.hobbies[5];
-            // Gebruik de variable 'trackNameOne' om in de HTML te zoeken naar de ID 'trackNameOne' a.d.h.v. innerHTML, om vervolgens deze waarde gelijk te maken aan de waarde bij 'title' in de 1e array van tracks uit de JSON file.
+
             trackNameOne.innerHTML = data.tracks[0].title;
             trackNameOneSecond.innerHTML = data.tracks[0].title;
-            // Gebruik de variable 'trackOne' om in de HTML te zoeken naar locatie van een audio bestand a.d.h.v. .src, om vervolgens deze waarde gelijk te maken aan de waarde bij 'location' in de 1e array van tracks uit de JSON file.
             trackOne.src = data.tracks[0].location;
-            // Gebruik de variable 'trackNameOne' om in de HTML te zoeken naar de ID 'trackNameTwo'a.d.h.v. innerHTML, om vervolgens deze waarde gelijk te maken aan de waarde bij 'title' in de 2e array van tracks uit de JSON file.
             trackNameTwo.innerHTML = data.tracks[1].title;
             trackNameTwoSecond.innerHTML = data.tracks[1].title;
-            // Gebruik de variable 'trackTwo' om in de HTML te zoeken naar locatie van een audio bestand a.d.h.v. .src, om vervolgens deze waarde gelijk te maken aan de waarde bij 'location' in de 2e array van tracks uit de JSON file.
             trackTwo.src = data.tracks[1].location;
 
             hero1name.innerHTML = data.heroes[0].hero;
