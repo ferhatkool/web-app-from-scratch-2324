@@ -95,44 +95,44 @@ Het gaat om drie regels JavaScript per dialog, waarvan ééntje al wat geïmplem
 ### 10-02-2024
 Mobile view waarin de knoppen in het midden staan en de tekst eronder. Dit zal nog worden aangepast, zodat de knoppen zichtbaar worden a.d.h.v. een hamburger menu:
 
-<img href="./docs/meta/readme/Mobile_Buttons1.png" alt="mobile view buttons"><br>
+<img src="./docs/meta/readme/Mobile_Buttons1.png" alt="mobile view buttons"><br>
 
 De mobile view beschikt nu over een hamburger menu waar alle knoppen in staan. Wanneer de mobile view wordt gegeven, zal eerst alleen een icoon voor het menu worden getoond, waarna het menu wordt opengeklapt als er op het menu wordt gedrukt. Hier zit nog geen animatie in. Mijn focus ligt nu op alles omtoveren naar een mobile view, zodat alles responsive is.
 
 https://dev.to/ljcdev/easy-hamburger-menu-with-js-2do0
 
-<img href="./docs/meta/readme/Mobile_Hamburger_Menu1.png" alt="mobile hamburger menu"><br>
+<img src="./docs/meta/readme/Mobile_Hamburger_Menu1.png" alt="mobile hamburger menu"><br>
 
-<img href="./docs/meta/readme/Mobile_Hamburger_Menu2.png" alt="mobile hamburger menu"><br>
+<img src="./docs/meta/readme/Mobile_Hamburger_Menu2.png" alt="mobile hamburger menu"><br>
 
 Ik heb de about me ‘page’ mobile responsive gemaakt, waardoor alle content van about me correct wordt weergegeven. Hierbij liep ik wel tegen een probleem aan, namelijk dat ik met geen mogelijkheid te tekst passend kreeg op de pagina en de width op 720px stond. Dit kon ik eerst niet achterhalen, totdat ik met alle styling opties ging rommelen. Hierdoor kwam ik erachter dat de width van de foto op de pagina te breed was, waardoor de tekst even breed werd. Op de foto stond een min-width van 20em ingesteld, wat de foto te breed maakte voor de pagina. Door dit te weizigen naar width: 100%, werd de foto even breed als de container en kwam alles netjes op de pagina te staan.
 
-<img href="./docs/meta/readme/Mobile_AboutMe1.png" alt="javascript code"><br>
+<img src="./docs/meta/readme/Mobile_AboutMe1.png" alt="javascript code"><br>
 
 Ik heb de playlist ‘pagina’ ook mobile responsive gemaakt. Hiervoor heb ik de twee onderdelen van deze pagina (playlists en geproduceerde tracks) voor de mobile view in een accoreon gezet, net zoals bij de Heroes & Villains pagina. Dit is alleen zichtbaar bij de mobile view. Hiervoor moet een nieuwe div worden aangemaakt met dezelfde content als bij de desktop view, alleen met een andere styling. Bij de originele div zal de display style none zijn bij de mobile view en de nieuwe div zal de display style flex hebben. Bij de desktop view is dit andersom.
 
-<img href="./docs/meta/readme/Mobile_Playlists1.png" alt="mobile view playlists"><br>
+<img src="./docs/meta/readme/Mobile_Playlists1.png" alt="mobile view playlists"><br>
 
 Mobile view CSS:
 
-<img href="./docs/meta/readme/Mobile_Playlists_CSS1.png" alt="mobile view playlists css code"><br>
+<img src="./docs/meta/readme/Mobile_Playlists_CSS1.png" alt="mobile view playlists css code"><br>
 
 Web view CSS:
 
-<img href="./docs/meta/readme/Web_Playlists_CSS1.png" alt="web view playlists css code"><br>
+<img src="./docs/meta/readme/Web_Playlists_CSS1.png" alt="web view playlists css code"><br>
 
 Ik heb een template voor de Weekly Nerd blog toegevoegd, dat zowel in de web view als in de mobile view in een accordeon zit. Dit, om meer overzicht te creeëren voor de blog pagina.
 
-<img href="./docs/meta/readme/Web_Blog1.png" alt="web view blog template"><br>
+<img src="./docs/meta/readme/Web_Blog1.png" alt="web view blog template"><br>
 
-<img href="./docs/meta/readme/Mobile_Blog1.png" alt="mobile view blog template"><br>
+<img src="./docs/meta/readme/Mobile_Blog1.png" alt="mobile view blog template"><br>
 
 ### 12-02-2024
 Alle styling aanpassen in HTML en CSS, zodat alle losse tekst in een paragraph staat met een bepaalde tekst grootte. Eerste experiment was met de font-size op 3.45vw, wat er in de mobile versie goed uit ziet, maar wanneer de size van een tablet wordt gebruikt, is de font veel te groot.
 
-<img href="./docs/meta/readme/Mobile_Top5_1.png" alt="mobile view top5 list"><br>
+<img src="./docs/meta/readme/Mobile_Top5_1.png" alt="mobile view top5 list"><br>
 
-<img href="./docs/meta/readme/Tablet_Top5_1.png" alt="tablet view top5 list"><br>
+<img src="./docs/meta/readme/Tablet_Top5_1.png" alt="tablet view top5 list"><br>
 
 Om dit te verhelpen heb ik een clamp toegepast op de font, waarij de minimale grootte 0.9rem is, de maximale grootte 1.2 rem en de gewenste grootte 2vw.
 
@@ -142,13 +142,13 @@ Ik heb op de About Me page alleen de tekst scrollbaar gemaakt i.p.v. de gehele d
 
 #### Before
 
-<img href="./docs/meta/readme/Web_AboutMe1.png" alt="web view about me dialog"><br>
+<img src="./docs/meta/readme/Web_AboutMe1.png" alt="web view about me dialog"><br>
 
 #### After
 
 Om dit werkend te krijgen heb ik de div van de tekst een specifieke hoogte moeten geven. Dit heb ik berekend van het aantal pixels naar de vh waarde, wat in dit geval 81.6311745334797vh moest zijn.
 
-<img href="./docs/meta/readme/Web_AboutMe2.png" alt="web view about me dialog"><br>
+<img src="./docs/meta/readme/Web_AboutMe2.png" alt="web view about me dialog"><br>
 
 Ik ben erachter gekomen dat bij de about me page de dialog wordt geopend vanaf de onderkant van de inhoud i.p.v. vanaf de bovenkant, zoals bij de andere dialogs. Het probleem hierachter komt door de button die onderaan de pagina staat dat voorheen de dialog sloot. Schijnbaar wordt de focus op de button gelegd wanneer de dialog wordt geopend. Dit verklaart niet waarom dit probleem zich niet voordeed bij de andere pagina’s, maar de button wilde ik toch al weghalen, dus dit vind ik een mooie oplossing.
 
@@ -158,13 +158,13 @@ Ik heb bij de top5 lijst in de web view de accordeons weggehaald en vaste tekst 
 
 ### Before
 
-<img href="./docs/meta/readme/Web_Top5_1.png" alt="web view top 5 list"><br>
+<img src="./docs/meta/readme/Web_Top5_1.png" alt="web view top 5 list"><br>
 
 ### After
 
 Alle accordeons zijn standaard geopend in de web view
 
-<img href="./docs/meta/readme/Web_Top5_2.png" alt="web view top 5 list"><br>
+<img src="./docs/meta/readme/Web_Top5_2.png" alt="web view top 5 list"><br>
 
 Random quotes - Lokaal
 
@@ -172,9 +172,9 @@ https://stackoverflow.com/questions/4550505/getting-a-random-value-from-a-javasc
 
 Ik heb een script toegevoegd waarbij uit een array een random quote wordt geselecteerd, dat vervolgens wordt weergegeven op de website als een soort van startpagina. Wanneer er ergens op de website wordt geklikt, zal het startscherm verdwijnen en komt de site zelf te voorschijn.
 
-<img href="./docs/meta/readme/Web_RandomQuotes_Script1.png" alt="random quotes script code"><br>
+<img src="./docs/meta/readme/Web_RandomQuotes_Script1.png" alt="random quotes script code"><br>
 
-<img href="./docs/meta/readme/Web_RandomQuotes1.png" alt="web view random quotes"><br>
+<img src="./docs/meta/readme/Web_RandomQuotes1.png" alt="web view random quotes"><br>
 
 Random quotes - Vanaf API
 
@@ -182,15 +182,15 @@ https://github.com/lukePeavey/quotable
 
 Ik heb het script geüpgraded, waardoor er nu vanaf een API quotes worden opgehaald en vervolgens worden weergegeven, inclusief de auteur.
 
-<img href="./docs/meta/readme/Web_RandomQuotes_Script2.png" alt="random quotes script code"><br>
+<img src="./docs/meta/readme/Web_RandomQuotes_Script2.png" alt="random quotes script code"><br>
 
-<img href="./docs/meta/readme/Web_RandomQuotes2.png" alt="web view random quotes"><br>
+<img src="./docs/meta/readme/Web_RandomQuotes2.png" alt="web view random quotes"><br>
 
 Ik heb een functie toegevoegd wat ervoor zorgt dat het 2 seconden duurt voordat bezoekers op de pagina kunnen klikken om door te gaan naar de website. De reden hierachter is om bezoekers ‘de quote te laten lezen’ en om te perongelukke aanrakingen te voorkomen die het startscherm skipt. Hiervoor heb ik de event listener voor een klik in een functie gezet. De functie staat in een Timeout van 2000ms, om gerekend 2 seconden.
 
 https://www.sitepoint.com/delay-sleep-pause-wait/
 
-<img href="./docs/meta/readme/Web_RandomQuotes_Script3.png" alt="random quotes script code"><br>
+<img src="./docs/meta/readme/Web_RandomQuotes_Script3.png" alt="random quotes script code"><br>
 
 Animatie toevoegen aan dialog:
 
@@ -198,15 +198,15 @@ https://codepen.io/geckotang/post/dialog-with-animation
 
 De animatie die ik heb toegevoegd aan de dialog kent twee soorten, de fade-in en de fade-out. De fade-in was relatief simpel om te maken, vanwege de open tag dat HTML toevoegd aan de dialog element wanneer er op de knop wordt gedrukt. De fade-in duurt één seconde. Hierop kon de volgende CSS worden toegepast.
 
-<img href="./docs/meta/readme/Dialog_Animation_Script1.png" alt="dialog animation javascript"><br>
+<img src="./docs/meta/readme/Dialog_Animation_Script1.png" alt="dialog animation javascript"><br>
 
 Helaas is er geen functionaliteit in HTML dat bij houdt of een dialog wordt gesloten. Hiervoor heb ik JavaScript gebruikt om te detecteren wanneer een dialog wordt gesloten. Hierbij wordt een class toegevoegd aan de dialog met daarin een transitie naar translateY(-110%). Het script zal de functie om de dialog te sluiten pas na één seconde uitvoeren, wanneer de animatie klaar is.
 
 https://www.w3schools.com/js/js_timing.asp
 
-<img href="./docs/meta/readme/Dialog_Animation_Script2.png" alt="dialog animation javascript"><br>
+<img src="./docs/meta/readme/Dialog_Animation_Script2.png" alt="dialog animation javascript"><br>
 
-<img href="./docs/meta/readme/Dialog_Animation_CSS1.png" alt="dialog animation css script"><br>
+<img src="./docs/meta/readme/Dialog_Animation_CSS1.png" alt="dialog animation css script"><br>
 
 Hierbij zit wel een bug wat ervoor zorgt dat wanneer er direct na het openen van de dialog, tijdens de animatie, buiten de dialog om wordt geklikt, de functie in JavaScript gelijk wordt uitgevoert. Dit viel niet te verhelpen met een extra timeout, gezien de dialog nog steeds gelijk verdwijnt. 
 
