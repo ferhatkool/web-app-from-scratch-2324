@@ -1,0 +1,16 @@
+{
+    "name":"Ferhat Kool",
+    "age":"22",
+    "job":"Winkelmedewerker bij GAMMA",
+    "study":"HBO-ICT: Cyber Security Specialist",
+    "city":"Hoorn",
+    "hobbies":["Muziek luisteren", "Muziek produceren", "Muziek mixen", "Genieten van festivals", "Fotografie", "Tot in de laten uren chillen met vrienden"],
+    "favouriteMovies":["Avengers: Infinity War","Black Widow","Batman v Superman: Dawn of Justice","Doctor Strange","The Wolverine"],
+    "superheroes":["Thor","Batman","Iron Man","Wolverine","Hulk"],
+    "supervillains":["Joker","Poison Ivy","Black Widow","Doctor Strange","Black Cat"],
+    "gamen":false,
+    "avatar":{
+        "url": "https://avatars.githubusercontent.com/u/159013968?v=4",
+        "alternativeText": "missing avatar"
+    }
+}
