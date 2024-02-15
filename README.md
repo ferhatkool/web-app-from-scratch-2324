@@ -232,7 +232,7 @@ Momenteel worden de top5 lijsten ingeladen a.d.h.v. hardcoded HTML en hardcoded 
 
 Het idee is dat de functie voor zowel de top5 heroes lijst als voor de top5 villains lijst gebruikt kan worden. Deze hebben dezelfde elementen, dus door de variables  in de functie generieke namen te geven, kan deze functie voor beide lijsten worden gebruikt. Om de data voor de lijsten op te halen wordt een forEach loop gebruikt, wat eerst de array ophaalt uit data, de array aan een variable toewijst, wat vervolgens de inhoud van de array gebruikt als waardes voor de functie. In de HTML is het alleen nodig om een div het juiste ID te geven, zodat het script weet waar de elementen geplaatst moeten worden.
 
-<img src="./docs/meta/readme/Top5HeroesAndVillains_HTML_Afterpng" alt="top5 list html after screenshot 1"><br>
+<img src="./docs/meta/readme/Top5HeroesAndVillains_HTML_After.png" alt="top5 list html after screenshot 1"><br>
 
 <img src="./docs/meta/readme/Top5HeroesAndVillains_JS1_After.png" alt="top5 list javascript after screenshot 1"><br>
 
