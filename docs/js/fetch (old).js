@@ -27,45 +27,6 @@ function dateOfBirthInString(year, month, day) {
     return string
 }
 
-// Loop om HTML te genereren voor de top5 lijst voor heroes en villains
-function top5ListLoop(name, picture, bio, id) {
-    // creeër een detail element
-    const details = document.createElement("details");
-    // voeg de class 'open_or_closed' toe aan het detail element
-    details.classList.add('open_or_closed');
-    // creeër een summary element
-    const summary = document.createElement("summary");
-    // voeg de class 'center' toe aan het summary element
-    summary.classList.add('center');
-    // creeër een 'textNode' (gewoon tekst) en voeg dit toe aan het summary element, waarvan de tekst afkomstig is uit name
-    summary.appendChild(document.createTextNode(name))
-    // creeër een div element
-    const flexDiv = document.createElement("div");
-    // voeg de class 'heroAndVillainFlex' toe aan het div element
-    flexDiv.classList.add('heroAndVillainFlex')
-    // creeër een paragraph element
-    const context = document.createElement("p");
-    // creeër een 'textNode' (gewoon tekst) en voeg dit toe aan het paragraph element, waarvan de tekst afkomstig is van bio
-    context.appendChild(document.createTextNode(bio))
-    // creeër een image element
-    const image = document.createElement("img");
-    // voeg de class 'characterPortrait' toe aan het image element
-    image.classList.add('characterPortrait')
-    // voeg een source toe aan het picture element, wat afkomstig is uit picture
-    image.src = picture
-    // voeg het paragraph element toe aan de div element
-    flexDiv.appendChild(context)
-    // voeg de image element toe aan de div element
-    flexDiv.appendChild(image)
-    // voeg de summary element toe aan de details element
-    details.appendChild(summary)
-    // voeg het div delement toe aan de details element
-    details.appendChild(flexDiv)
-
-    // voeg het detail element toe aan de gespecificeerde id, zodat het detail element aan de div in de HTML wordt toegevoegd.
-    document.getElementById(id).appendChild(details)
-}
-
 // Haal uit de HTML het element dat bij een ID or class hoort.
 const domainNameVar = document.getElementById("domainName");
 const nameVar1 = document.getElementById("name1");
@@ -93,6 +54,46 @@ const trackNameTwoSecond = document.querySelector("#trackName2_2");
 
 const trackOne = document.querySelector("#track1");
 const trackTwo = document.querySelector("#track2");
+
+const hero1name = document.getElementById("hero1");
+const hero1picture = document.querySelector("#hero1picture");
+const hero1context = document.getElementById("hero1context");
+
+const hero2name = document.getElementById("hero2");
+const hero2picture = document.querySelector("#hero2picture");
+const hero2context = document.getElementById("hero2context");
+
+const hero3name = document.getElementById("hero3");
+const hero3picture = document.querySelector("#hero3picture");
+const hero3context = document.getElementById("hero3context");
+
+const hero4name = document.getElementById("hero4");
+const hero4picture = document.querySelector("#hero4picture");
+const hero4context = document.getElementById("hero4context");
+
+const hero5name = document.getElementById("hero5");
+const hero5picture = document.querySelector("#hero5picture");
+const hero5context = document.getElementById("hero5context");
+
+const villain1name = document.getElementById("villain1");
+const villain1picture = document.querySelector("#villain1picture");
+const villain1context = document.getElementById("villain1context");
+
+const villain2name = document.getElementById("villain2");
+const villain2picture = document.querySelector("#villain2picture");
+const villain2context = document.getElementById("villain2context");
+
+const villain3name = document.getElementById("villain3");
+const villain3picture = document.querySelector("#villain3picture");
+const villain3context = document.getElementById("villain3context");
+
+const villain4name = document.getElementById("villain4");
+const villain4picture = document.querySelector("#villain4picture");
+const villain4context = document.getElementById("villain4context");
+
+const villain5name = document.getElementById("villain5");
+const villain5picture = document.querySelector("#villain5picture");
+const villain5context = document.getElementById("villain5context");
 
 // Variable waarin de locatie van een JSON file staat.
 const jsonFile = "./json/data.json"
@@ -139,16 +140,46 @@ const jsonFile = "./json/data.json"
             trackNameTwoSecond.innerHTML = data.tracks[1].title;
             trackTwo.src = data.tracks[1].location;
 
-            // voor elk voorkomende hero, voer de functie uit
-            data.heroes.forEach(hero => {
-                // functie met als meegegeven waardes de naam van de hero, foto van de hero, de context van de hero en het ID van de div waar het element geplaatst wordt.
-                top5ListLoop(hero.hero, hero.heropicture, hero.herocontext, 'heroes')
-            })
-            // voor elk voorkomende villain, voer de functie uit
-            data.villains.forEach(villain => {
-                // functie met als meegegeven waardes de naam van de villain, foto van de villain, de context van de villain en het ID van de div waar het element geplaatst wordt.
-                top5ListLoop(villain.villain, villain.villainpicture, villain.villaincontext, 'villains')
-            })
+            hero1name.innerHTML = data.heroes[0].hero;
+            hero1picture.src = data.heroes[0].heropicture;
+            hero1context.innerHTML = data.heroes[0].herocontext;
+
+            hero2name.innerHTML = data.heroes[1].hero;
+            hero2picture.src = data.heroes[1].heropicture;
+            hero2context.innerHTML = data.heroes[1].herocontext;
+
+            hero3name.innerHTML = data.heroes[2].hero;
+            hero3picture.src = data.heroes[2].heropicture;
+            hero3context.innerHTML = data.heroes[2].herocontext;
+
+            hero4name.innerHTML = data.heroes[3].hero;
+            hero4picture.src = data.heroes[3].heropicture;
+            hero4context.innerHTML = data.heroes[3].herocontext;
+
+            hero5name.innerHTML = data.heroes[4].hero;
+            hero5picture.src = data.heroes[4].heropicture;
+            hero5context.innerHTML = data.heroes[4].herocontext;
+
+            villain1name.innerHTML = data.villains[0].villain;
+            villain1picture.src = data.villains[0].villainpicture;
+            villain1context.innerHTML = data.villains[0].villaincontext;
+
+            villain2name.innerHTML = data.villains[1].villain;
+            villain2picture.src = data.villains[1].villainpicture;
+            villain2context.innerHTML = data.villains[1].villaincontext;
+
+            villain3name.innerHTML = data.villains[2].villain;
+            villain3picture.src = data.villains[2].villainpicture;
+            villain3context.innerHTML = data.villains[2].villaincontext;
+
+            villain4name.innerHTML = data.villains[3].villain;
+            villain4picture.src = data.villains[3].villainpicture;
+            villain4context.innerHTML = data.villains[3].villaincontext;
+
+            villain5name.innerHTML = data.villains[4].villain;
+            villain5picture.src = data.villains[4].villainpicture;
+            villain5context.innerHTML = data.villains[4].villaincontext;
+
             // Genereer een console bericht met daarin de inhoud van de variable 'data', wat de gehele JSON file is.
             console.log(data);
         })

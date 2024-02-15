@@ -10,8 +10,6 @@
     <link href="./styles/scrollbar.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Web App From Scratch 23-24</title>
-    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
-    <META HTTP-EQUIV="Expires" CONTENT="-1">
 </head>
     <body class="">
         <div id="randomClickToContinue" class="quote_styling">
@@ -26,11 +24,11 @@
                         <i class="closeIcon material-icons" style="display: none">close</i>
                     </button>
                     <ul class="button_layout">
-                        <button class="button button_animation toggle" id="aboutMeButton">About Me</button>
-                        <button class="button button_animation toggle" id="musicButton">Muziek</button>
-                        <button class="button button_animation toggle" id="projectsButton">Projects</button>
-                        <button class="button button_animation toggle" id="top5Button">Top 5</button>
-                        <button class="button button_animation toggle" id="blogButton">Blog</button>
+                        <li><button class="button button_animation toggle" id="aboutMeButton">About Me</button></li>
+                        <li><button class="button button_animation toggle" id="musicButton">Muziek</button></li>
+                        <li><button class="button button_animation toggle" id="projectsButton">Projects</button></li>
+                        <li><button class="button button_animation toggle" id="top5Button">Top 5</button></li>
+                        <li><button class="button button_animation toggle" id="blogButton">Blog</button></li>
                     </ul>
                 </div>
             </div>
@@ -63,7 +61,7 @@
                                     </p>
                                 </div>
                                 <div class="portrait not_scrollable">
-                                    <img src="./meta/pictures/portrait2.jpg" class="portrait">
+                                    <img src="./meta/pictures/portrait2.jpg" class="portrait" alt="">
                                 </div>
                                 
                             </div>
@@ -75,7 +73,7 @@
             <dialog id="dialogMusic" class="scrollbar">
                 <div id="musicStopPropagation">
                     <form method="dialog">
-                        <div class="content responsive_music_web"style="display: flex;">
+                        <div class="content responsive_music_web" style="display: flex;">
                             <h2 class="center">Playlists! (web)</h2>
                             <div class="playlists">
                                 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/557OhUWEAHkqKsdXJgQ5Zt?utm_source=generator&theme=0" width="33%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -100,35 +98,32 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="content responsive_music_mobile"style="display: flex;">
+                        <div class="content responsive_music_mobile" style="display: flex;">
                             <details>
                                 <summary class="center"><h2 class="inline">Playlists!</h2></summary>
                                 <div class="playlists">
-                                    <iframe class="playlist" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/557OhUWEAHkqKsdXJgQ5Zt?utm_source=generator&theme=0" width="auto" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                                    <iframe width="100%" height="304" scrolling="no" frameborder="yes" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1774555821&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" style="margin-bottom: 10px; border-radius: 12px;"></iframe>
-                                    <iframe class="playlist" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2BX34DOcDREOf1ymxnAi0M?utm_source=generator&theme=0" width="auto" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                                    <iframe class="playlist" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/557OhUWEAHkqKsdXJgQ5Zt?utm_source=generator&theme=0" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                                    <iframe height="304" scrolling="no" frameborder="yes" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1774555821&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" style="margin-bottom: 10px; border-radius: 12px;"></iframe>
+                                    <iframe class="playlist" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2BX34DOcDREOf1ymxnAi0M?utm_source=generator&theme=0" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                                     <!--<iframe class="playlist" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4zHDt33wIOJrK9XGpTq7aj?utm_source=generator&theme=0" width="auto" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>-->
                                 </div>
                             </details>
                                 <h2 class="center" >Geproduceerde Tracks!</h2>
                                 <div class="tracks">
-                                    <h2>Track 1: <div id="trackName1_2" class="inline"></div></h2>
+                                    <h2>Track 1: <span id="trackName1_2" class="inline"></span></h2>
                                     <div class="track">
-                                        
                                         <audio controls class="audio">
                                             <source id="track1" src="./meta/music/track1.mp3" type="audio/mp3">
                                         </audio>
                                     </div>
-                                    <h2>Track 2: <div id="trackName2_2" class="inline"></div></h2>
-                                    <div class="track">
-                                        
+                                    <h2>Track 2: <span id="trackName2_2" class="inline"></span></h2>
+                                    <div class="track">           
                                         <audio controls class="audio">
                                             <source id="track2" src="./meta/music/track2.mp3" type="audio/mp3">
                                         </audio>
                                     </div>
                                 </div>
                         </div>
-                        <button class="button_animation" id="exit">Close</button>
                     </form>
                 </div>
             </dialog>
@@ -140,7 +135,6 @@
                             <h2 class="center">Projects!</h2>
                                 
                         </div>
-                        <button class="button_animation" id="exit">Close</button>
                     </form>
                 </div>
             </dialog>
@@ -150,86 +144,14 @@
                     <form method="dialog">
                         <div class="content" id="top5" style="display: flex;">
                             <div class="top5list" style="display: flex;">
-                                <div class="top5heroes">
+                                <div class="top5heroes" id="heroes">
                                     <h2 class="center">Heroes</h2>
-                                    <details id="open_or_closed" class="open_or_closed">
-                                        <summary class="center"><div id="hero1" class="inline"></div></summary>
-                                        <div class="heroAndVillainFlex">
-                                            <p><span id="hero1context" class="inline"></span></p>
-                                            <img id="hero1picture" class="characterPortrait" src="">
-                                        </div>
-                                    </details>
-                                    <details class="open_or_closed">
-                                        <summary class="center"><div id="hero2" class="inline"></div></summary>
-                                        <div class="heroAndVillainFlex">
-                                            <p><span id="hero2context" class="inline"></span></p>
-                                            <img id="hero2picture" class="characterPortrait" src="">
-                                        </div>
-                                    </details>
-                                    <details class="open_or_closed">
-                                        <summary class="center"><div id="hero3" class="inline"></div></summary>
-                                        <div class="heroAndVillainFlex">
-                                            <p><span id="hero3context" class="inline"></span></p>
-                                            <img id="hero3picture" class="characterPortrait" src="">
-                                        </div>
-                                    </details>
-                                    <details class="open_or_closed">
-                                        <summary class="center"><div id="hero4" class="inline"></div></summary>
-                                        <div class="heroAndVillainFlex">
-                                            <p><span id="hero4context" class="inline"></span></p>
-                                            <img id="hero4picture" class="characterPortrait" src="">
-                                        </div>
-                                    </details>
-                                    <details class="open_or_closed">
-                                        <summary class="center"><div id="hero5" class="inline"></div></summary>
-                                        <div class="heroAndVillainFlex">
-                                            <p><span id="hero5context" class="inline"></span></p>
-                                            <img id="hero5picture" class="characterPortrait" src="">
-                                        </div>
-                                    </details>
                                 </div>
-                                <div class="top5villains">
+                                <div class="top5villains" id="villains">
                                     <h2 class="center">Villains</h2>
-                                        <details class="open_or_closed">
-                                            <summary class="center"><div id="villain1" class="inline"></div></summary>
-                                            <div class="heroAndVillainFlex">
-                                                <p><span id="villain1context" class="inline"></span></p>
-                                                <img id="villain1picture" class="characterPortrait" src="">
-                                            </div>
-                                        </details>
-                                        <details class="open_or_closed">
-                                            <summary class="center"><div id="villain2" class="inline"></div></summary>
-                                            <div class="heroAndVillainFlex">
-                                                <p><span id="villain2context" class="inline"></span></p>
-                                                <img id="villain2picture" class="characterPortrait" src="">
-                                            </div>
-                                        </details>
-                                        <details class="open_or_closed">
-                                            <summary class="center"><div id="villain3" class="inline"></div></summary>
-                                            <div class="heroAndVillainFlex">
-                                                <p><span id="villain3context" class="inline"></span></p>
-                                                <img id="villain3picture" class="characterPortrait" src="">
-                                            </div>
-                                        </details>
-                                        <details class="open_or_closed">
-                                            <summary class="center"><div id="villain4" class="inline"></div></summary>
-                                            <div class="heroAndVillainFlex">
-                                                <p><span id="villain4context" class="inline"></span></p>
-                                                <img id="villain4picture" class="characterPortrait" src="">
-                                            </div>
-                                        </details>
-                                        <details class="open_or_closed">
-                                            <summary class="center"><div id="villain5" class="inline"></div></summary>
-                                            <div class="heroAndVillainFlex">
-                                                <p><span id="villain5context" class="inline"></span ></p>
-                                                <img id="villain5picture" class="characterPortrait" src="">
-                                            </div>
-                                        </details>
-    
                                 </div>
                             </div>
                         </div>
-                        <button class="button_animation" id="exit">Close</button>
                     </form>
                 </div>
             </dialog>
@@ -262,16 +184,15 @@
                                 </div>
                             </details>
                         </div>
-                        <button class="button_animation" id="exit">Close</button>
                     </form>
                 </div>
             </dialog>
 
             <div class="default white" style="display: flex;">
                 <h1 class="center">
-                    Welkom op <div id="domainName" class="inline"></div>!</h1>
+                    Welkom op <span id="domainName" class="inline"></span>!</h1>
                 <h2 class="center">
-                    This page is created and owned by <div id="name2" class="inline"></div>.</h2>
+                    This page is created and owned by <span id="name2" class="inline"></span>.</h2>
             </div>
 
             <script src="./js/fetch.js" type="application/javascript"></script>
