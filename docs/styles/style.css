@@ -33,6 +33,7 @@ body {
         display: none;
         flex-flow: column nowrap;
         padding-inline-start: 0px;  
+        list-style-type: none;
     }
 
     .button {
@@ -77,7 +78,7 @@ body {
     }
 
     .responsive_music_web { 
-        display: none !important;
+        display: none;
     }
 
     .playlists {
@@ -120,6 +121,7 @@ body {
         margin: auto;
         padding: auto; 
         padding-inline-start: 0px;
+        list-style-type: none;
     }
     
     .button {
@@ -166,7 +168,7 @@ body {
     }
 
     .responsive_music_mobile {
-        display: none !important;
+        display: none;
     }
 
     .playlists {

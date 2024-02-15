@@ -216,3 +216,60 @@ Ik heb een bug opgelost wat het mogelijk maakte om de quote te ‘skippen’ wan
 
 ### 14-02-2024
 
+### 15-02-2024
+
+Momenteel worden de top5 lijsten ingeladen a.d.h.v. hardcoded HTML en hardcoded JavaScript. Om deze twee bestanden flink in te korten ben ik aan de slag gegaan om de JSON data op te halen a.d.h.v. forEach loop, wat vervolgens een functie uitvoert om de HTML elementen te genereren in JavaScript.
+
+#### Before
+
+<img src="./docs/meta/readme/Top5HeroesAndVillains_HTML_Before.png" alt="playlists html before screenshot 1"><br>
+
+<img src="./docs/meta/readme/Top5HeroesAndVillains_JS1_Before.png" alt="playlists javascript before screenshot 1"><br>
+
+<img src="./docs/meta/readme/Top5HeroesAndVillains_JS2_Before.png" alt="playlists javascript before screenshot 2"><br>
+
+#### After
+
+Het idee is dat de functie voor zowel de top5 heroes lijst als voor de top5 villains lijst gebruikt kan worden. Deze hebben dezelfde elementen, dus door de variables  in de functie generieke namen te geven, kan deze functie voor beide lijsten worden gebruikt. Om de data voor de lijsten op te halen wordt een forEach loop gebruikt, wat eerst de array ophaalt uit data, de array aan een variable toewijst, wat vervolgens de inhoud van de array gebruikt als waardes voor de functie. In de HTML is het alleen nodig om een div het juiste ID te geven, zodat het script weet waar de elementen geplaatst moeten worden.
+
+<img src="./docs/meta/readme/Top5HeroesAndVillains_HTML_Afterpng" alt="playlists html after screenshot 1"><br>
+
+<img src="./docs/meta/readme/Top5HeroesAndVillains_JS1_After.png" alt="playlists javascript after screenshot 1"><br>
+
+<img src="./docs/meta/readme/Top5HeroesAndVillains_JS2_After.png" alt="playlists javascript after screenshot 2"><br>
+
+Gebruikte bronnen:
+- https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_foreach
+- https://stackoverflow.com/questions/1115310/how-can-i-add-a-class-to-a-dom-element-in-javascript
+- https://stackoverflow.com/questions/36798005/append-multiple-items-in-javascript
+- https://stackoverflow.com/questions/26542652/how-to-add-text-into-span-after-document-createelementspan
+
+De hobbies op de about me page staan nu hardcoded in een lijst, waarbij de inhoud wordt opgehaald uit JSON. Hiervoor heb ik ook een forEach loop gemaakt dat voor elke waarde in de JSON array een HTML element genereerd. 
+
+#### Before
+
+<img src="./docs/meta/readme/Hobbies_HTML_Before.png" alt="hobbies html before screenshot 1"><br>
+
+<img src="./docs/meta/readme/Hobbies_JS1_Before.png" alt="hobbies javascript before screenshot 1"><br>
+
+<img src="./docs/meta/readme/Hobbies_JS2_Before.png" alt="hobbies javascript aftbeforeer screenshot 2"><br>
+
+#### After
+
+<img src="./docs/meta/readme/Hobbies_HTML_After.png" alt="hobbies html after screenshot 1"><br>
+
+<img src="./docs/meta/readme/Hobbies_JS1_After.png" alt="hobbies javascript after screenshot 1"><br>
+
+<img src="./docs/meta/readme/Hobbies_JS2_After.png" alt="hobbies javascript after screenshot 2"><br>
+
+De huidige playlists page is gedupliceerd, om zo een mobile view en web view te creëren met verschillende HTML elementen. Om dit beter te maken heb ik geprobeerd om in JavaScript een functie te maken dat alle HTML elemente genereerd op basis van de screen size. Dit zal wel werken, alleen zullen de elementen niet verversen wanneer de screen size veranderd, omdat wat in de HTML staat zo blijft staan. Hier heb ik een functie voor geschreven dat de pagina herlaadt wanneer de screensize verandert. De reload gebeurt alleen als de screensize waarde onder of boven de 800 komt.
+
+<img src="./docs/meta/readme/Test_Functie1.png" alt="test functie page reload"><br>
+
+Het nadeel hiervan is dat de gehele pagina wordt herladen en er is met javascript geen simpele mogelijkheid om dit te doen. Er kan gebruik worden gemaakt van sessionStorage, wat dan de staat van de website onthoud bij een reload en dat alleen de elementen die veranderd moeten worden uit de sessionStorage worden verwijderd. 
+
+https://laracasts.com/discuss/channels/javascript/how-to-reload-data-only-for-specific-element-without-reload-the-whole-page
+
+Maar de reload in het algemeen haalt naar mijn mening de responsiveness weg, omdat er een reload moet plaats vinden om bepaalde elementen te verversen. Om deze reden heb ik dit niet geïmplementeerd en hou ik het bij de div stijl op ‘display: block’ en ‘display: none’ dat wordt toegepast op het element wanneer de screensize kleiner wordt dan 800px.
+
+<img src="./docs/meta/readme/Test_Functie2.png" alt="test functie playlist reload"><br>

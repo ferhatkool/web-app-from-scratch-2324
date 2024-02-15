@@ -29,25 +29,25 @@ function dateOfBirthInString(year, month, day) {
 
 // Loop om HTML te genereren voor de top5 lijst voor heroes en villains
 function top5ListLoop(name, picture, bio, id) {
-    // creeër een detail element
+    // creëer een detail element
     const details = document.createElement("details");
     // voeg de class 'open_or_closed' toe aan het detail element
     details.classList.add('open_or_closed');
-    // creeër een summary element
+    // creëer een summary element
     const summary = document.createElement("summary");
     // voeg de class 'center' toe aan het summary element
     summary.classList.add('center');
-    // creeër een 'textNode' (gewoon tekst) en voeg dit toe aan het summary element, waarvan de tekst afkomstig is uit name
+    // creëer een 'textNode' (gewoon tekst) en voeg dit toe aan het summary element, waarvan de tekst afkomstig is uit name
     summary.appendChild(document.createTextNode(name))
-    // creeër een div element
+    // creëer een div element
     const flexDiv = document.createElement("div");
     // voeg de class 'heroAndVillainFlex' toe aan het div element
     flexDiv.classList.add('heroAndVillainFlex')
-    // creeër een paragraph element
+    // creëer een paragraph element
     const context = document.createElement("p");
-    // creeër een 'textNode' (gewoon tekst) en voeg dit toe aan het paragraph element, waarvan de tekst afkomstig is van bio
+    // creëer een 'textNode' (gewoon tekst) en voeg dit toe aan het paragraph element, waarvan de tekst afkomstig is van bio
     context.appendChild(document.createTextNode(bio))
-    // creeër een image element
+    // creëer een image element
     const image = document.createElement("img");
     // voeg de class 'characterPortrait' toe aan het image element
     image.classList.add('characterPortrait')
@@ -62,8 +62,20 @@ function top5ListLoop(name, picture, bio, id) {
     // voeg het div delement toe aan de details element
     details.appendChild(flexDiv)
 
-    // voeg het detail element toe aan de gespecificeerde id, zodat het detail element aan de div in de HTML wordt toegevoegd.
+    // voeg het detail element toe aan het gespecificeerde id, zodat het detail element aan de div in de HTML wordt toegevoegd.
     document.getElementById(id).appendChild(details)
+}
+
+// Loop om HTML te genereren voor de hobbies in de about me page
+function hobbyLoop(hobby, id) {
+    // creëer een li element
+    const li = document.createElement('li')
+    // voeg de class 'bulletlist' toe aan het li element
+    li.classList.add('bulletList')
+    // creëer een 'textNode' (gewoon tekst) en voeg dit toe aan het li element, waarvan de tekst afkomstig uit hobby
+    li.appendChild(document.createTextNode(hobby))
+    // voeg het li element toe aan het gespecifiseerde id, zodat het li element aan het ul element in de HTML wordt toegevoegd
+    document.getElementById(id).appendChild(li)
 }
 
 // Haal uit de HTML het element dat bij een ID or class hoort.
@@ -79,20 +91,8 @@ const minorVar = document.getElementById("minor");
 const jobCompanyVar = document.getElementById("jobCompany");
 const jobTitleVar = document.getElementById("jobTitle");
 
-const hobbyOne = document.getElementById("hobby1");
-const hobbyTwo = document.getElementById("hobby2");
-const hobbyThree = document.getElementById("hobby3");
-const hobbyFour = document.getElementById("hobby4");
-const hobbyFive = document.getElementById("hobby5");
-const hobbySix = document.getElementById("hobby6");
-
 const trackNameOne = document.querySelector("#trackName1");
 const trackNameTwo = document.querySelector("#trackName2");
-const trackNameOneSecond = document.querySelector("#trackName1_2");
-const trackNameTwoSecond = document.querySelector("#trackName2_2");
-
-const trackOne = document.querySelector("#track1");
-const trackTwo = document.querySelector("#track2");
 
 // Variable waarin de locatie van een JSON file staat.
 const jsonFile = "./json/data.json"
@@ -125,19 +125,14 @@ const jsonFile = "./json/data.json"
             jobCompanyVar.innerHTML = data.jobCompany;
             jobTitleVar.innerHTML = data.jobTitle;
 
-            hobbyOne.innerHTML = data.hobbies[0];
-            hobbyTwo.innerHTML = data.hobbies[1];
-            hobbyThree.innerHTML = data.hobbies[2];
-            hobbyFour.innerHTML = data.hobbies[3];
-            hobbyFive.innerHTML = data.hobbies[4];
-            hobbySix.innerHTML = data.hobbies[5];
-
             trackNameOne.innerHTML = data.tracks[0].title;
-            trackNameOneSecond.innerHTML = data.tracks[0].title;
-            trackOne.src = data.tracks[0].location;
             trackNameTwo.innerHTML = data.tracks[1].title;
-            trackNameTwoSecond.innerHTML = data.tracks[1].title;
-            trackTwo.src = data.tracks[1].location;
+
+            // voor elk voorkomende hobby, voer de functie uit
+            data.hobbies.forEach(hobby => {
+                // functie met als meegegeven waardes de hobby en id voor de ul waar de hobby in moet worden geplaatst.
+                hobbyLoop(hobby, 'hobbyList')
+            })
 
             // voor elk voorkomende hero, voer de functie uit
             data.heroes.forEach(hero => {
